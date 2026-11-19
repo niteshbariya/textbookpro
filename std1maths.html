@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TET-1 સ્પેશિયલ: આનંદદાયી ગણિત - ધોરણ 1 | ૧૦૦ પ્રશ્નો</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-calculator"></i> TET-1 સ્પેશિયલ: આનંદદાયી ગણિત - ધોરણ 1</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-calculator"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">TET-1 આનંદદાયી ગણિત પ્રશ્નો - ધોરણ 1</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">વાંચન, સ્મૃતિ, તર્ક, વિશ્લેષણ અને શિક્ષણશાસ્ત્રીય સમજ આધારિત ૧૦૦ બહુવિકલ્પી પ્રશ્નો</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> TET-1 આનંદદાયી ગણિત - ધોરણ 1 | ૧૦૦ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૦ ઉચ્ચ કઠિનતામૂલ્ય (HOT) પ્રશ્નોનો ડેટાસેટ (ધોરણ-૧ : આનંદદાયી ગણિત)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1: બાળક બિલાડીનું સ્થાન “પલંગની નીચે” કહી શકે છે, પરંતુ વસ્તુઓની ગોઠવણી બદલતાં ગૂંચવાય છે. શિક્ષકનું શ્રેષ્ઠ આગળનું પગલું કયું?",
+    "options": [
+      "સ્થાનવાચક શબ્દોની વ્યાખ્યા લખાવવી",
+      "વાસ્તવિક વસ્તુઓ ખસેડાવી જુદા દૃષ્ટિકોણથી સ્થાનનું વર્ણન કરાવવું",
+      "બધા શબ્દોનું એકસાથે મૌખિક પરીક્ષણ લેવું",
+      "ચિત્રમાં સાચા જવાબો બતાવી યાદ કરાવવું"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧ – મારી વહાલી બિલાડી શોધીએ! (સંખ્યા પહેલાંની વિભાવનાઓ)",
+    "exp": "સ્થાનની સમજ ક્રિયા અને સંદર્ભથી વિકસે છે. વસ્તુ ખસેડવી અને બાળક પાસે વર્ણન કરાવવું મૂર્ત અનુભવને ભાષા સાથે જોડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 2: સૂચના છે: “ટેબલની નીચે અને દરવાજાની નજીક રહેલી લાલ વસ્તુ શોધો.” બાળક માત્ર એક શરત પૂરી કરતી વસ્તુ લાવે છે. કઈ ક્ષમતા અધૂરી છે?",
+    "options": [
+      "રંગ ઓળખ",
+      "સ્થાનિક સંબંધોની સંયુક્ત સૂચનાનું અનુસરણ",
+      "અંકલેખન",
+      "આકાર ઓળખ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧ – મારી વહાલી બિલાડી શોધીએ! (સંખ્યા પહેલાંની વિભાવનાઓ)",
+    "exp": "બે શરતો એકસાથે પૂરી કરવી પડે છે. એક જ લક્ષણ પકડવું સૂચનાના સંયોજનને ન સમજવાનો સંકેત છે."
+  },
+  {
+    "q": "પ્રશ્ન 3: રેલગાડીમાં “લાલ ડબ્બાની આગળ કેટલા?” પૂછતાં બાળક પોતાની જમણી બાજુના ડબ્બા ગણે છે. કઈ સમજણ તપાસવી જોઈએ?",
+    "options": [
+      "રંગ વર્ગીકરણ",
+      "આગળ-પાછળનો સંબંધ ગાડીની દિશા પર આધારિત છે તે સમજ",
+      "સંખ્યા સંરક્ષણ",
+      "વજનની તુલના"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧ – મારી વહાલી બિલાડી શોધીએ! (સંખ્યા પહેલાંની વિભાવનાઓ)",
+    "exp": "આગળ-પાછળ પાનાની જમણી-ડાબી દિશા નથી; ગાડીના ગતિમુખના સંદર્ભમાં નક્કી થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 4: દડો ટોપલીના કિનારે અટકે ત્યારે બાળક “અંદર” કે “બહાર” કહેતો નથી. શિક્ષક શું કરે?",
+    "options": [
+      "જવાબ ખોટો ગણાવે",
+      "સીમાની સ્થિતિ અંગે ચર્ચા કરીને અંદર-બહારનો માપદંડ નક્કી કરાવે",
+      "રમત બંધ કરે",
+      "શબ્દો દસ વાર લખાવે"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧ – મારી વહાલી બિલાડી શોધીએ! (સંખ્યા પહેલાંની વિભાવનાઓ)",
+    "exp": "કિનારો સીમા-સ્થિતિ છે. કઈ સ્થિતિમાં વસ્તુ અંદર ગણાય તે અંગે નિરીક્ષણ આધારિત ચર્ચા ઊંડી સમજ આપે છે."
+  },
+  {
+    "q": "પ્રશ્ન 5: ત્રિરંગાને ફેરવતાં બાળક કહે છે કે ઉપરનો રંગ બદલાઈ ગયો. આ કઈ ગૂંચવણ છે?",
+    "options": [
+      "રંગ ઓળખની",
+      "ચિત્રની દિશા અને વસ્તુના નિર્ધારિત ભાગ વચ્ચેના ભેદની",
+      "ગણતરીની",
+      "લંબાઈની"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧ – મારી વહાલી બિલાડી શોધીએ! (સંખ્યા પહેલાંની વિભાવનાઓ)",
+    "exp": "પાનાની સરખામણીએ ઉપર-નીચે બદલાય છે, પરંતુ ધ્વજના પટ્ટાઓનો સંબંધ ધ્વજની યોગ્ય દિશા સાથે સમજવો પડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 6: બાળક “ઝાડની ઉપર” અને “ઝાડ પર” બંને કહે છે. સ્થાનની સમજ તપાસવા કયો પ્રશ્ન શ્રેષ્ઠ?",
+    "options": [
+      "ઉપરની જોડણી લખો",
+      "“ડાળી પર બેઠું” અને “ઝાડની ઉપર ઉડે છે” વચ્ચેનો તફાવત સમજાવો",
+      "શબ્દ દસ વાર બોલો",
+      "ઝાડ રંગો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧ – મારી વહાલી બિલાડી શોધીએ! (સંખ્યા પહેલાંની વિભાવનાઓ)",
+    "exp": "સંદર્ભમાં શબ્દપ્રયોગનો તફાવત સમજાવવાથી સ્થાન અને ભાષા બંનેનું જ્ઞાન બહાર આવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 7: એક બાળક દડો ટોપલીમાં નાખે ત્યારે “અંદર” કહે છે. દડો ટોપલીની બહાર જમીન પર પડે ત્યારે “નીચે” કહે છે. શિક્ષક કઈ રીતે સુધારે?",
+    "options": [
+      "નીચે શબ્દ ખોટો છે એમ કહે",
+      "ટોપલીની સરખામણીએ સ્થાન અને જમીનની સરખામણીએ સ્થાન જુદાં છે તે બંને સંદર્ભ બતાવે",
+      "બાળકને રમતમાંથી દૂર કરે",
+      "માત્ર અંદર-બહાર લખાવે"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧ – મારી વહાલી બિલાડી શોધીએ! (સંખ્યા પહેલાંની વિભાવનાઓ)",
+    "exp": "એક જ વસ્તુ માટે જુદા આધારબિંદુથી જુદા સ્થાનવાચક શબ્દો લાગુ પડે છે. સંદર્ભનું નામ આપવાથી સંબંધ સ્પષ્ટ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 8: ગોળ છાપવાળું ચોરસ કાર્ડ બાળક “દડા જેવું” કહે છે. કયો પ્રશ્ન ગહન વિચાર કરાવશે?",
+    "options": [
+      "કાર્ડનો રંગ કયો?",
+      "કાર્ડને ફેરવો; શું તે દડાની જેમ ગબડી શકે? શા માટે?",
+      "કાર્ડ પર કેટલા અક્ષર?",
+      "કાર્ડ કોનું?"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૨ – શું છે લાંબુ? શું છે ગોળ? (આકૃતિઓ)",
+    "exp": "ચિત્રમાં ગોળ દેખાવ અને ત્રિપરિમાણીય ઘન વચ્ચેનો ભેદ ગતિના અનુભવથી સમજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 9: નળાકાર ડબ્બો એક સ્થિતિમાં ગબડે છે અને બીજી સ્થિતિમાં સરકે છે. યોગ્ય સામાન્યકરણ કયું?",
+    "options": [
+      "દરેક વસ્તુ એક જ રીતે ગતિ કરે",
+      "આકારની સાથે મૂકવાની સ્થિતિ પણ ગતિને અસર કરે",
+      "ગબડવું માત્ર વજન પર આધારિત",
+      "સરકવું અને ગબડવું સમાન"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૨ – શું છે લાંબુ? શું છે ગોળ? (આકૃતિઓ)",
+    "exp": "વક્ર સપાટી ગબડવામાં અને સપાટ ભાગ સરકવામાં મદદ કરે છે. આકાર અને સ્થિતિ બંને મહત્વના છે."
+  },
+  {
+    "q": "પ્રશ્ન 10: બાળક એક વસ્તુને “લાંબી” અને “ગોળ” બંને જૂથમાં મૂકે છે. શિક્ષકનું યોગ્ય અર્થઘટન કયું?",
+    "options": [
+      "બાળક નિયમ તોડે છે",
+      "એક વસ્તુમાં અનેક ગુણધર્મ હોઈ શકે; વર્ગીકરણનો માપદંડ સ્પષ્ટ કરવો",
+      "બાળકને આકાર આવડતો નથી",
+      "બાળક ગણતરી ભૂલી ગયો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૨ – શું છે લાંબુ? શું છે ગોળ? (આકૃતિઓ)",
+    "exp": "વસ્તુ એકથી વધુ ગુણધર્મ ધરાવે છે. કયા લક્ષણના આધારે જૂથ બનાવ્યું તે સ્પષ્ટ કરવું જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 11: સિક્કો, દડો અને નળાકાર વસ્તુને સ્પર્શી અને ફેરવી જોવાનું મુખ્ય શૈક્ષણિક કારણ કયું?",
+    "options": [
+      "રંગ ઓળખ",
+      "સપાટી, ઘન આકાર અને ગતિના સંબંધનો અનુભવ",
+      "અંકલેખન",
+      "સમયક્રમ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૨ – શું છે લાંબુ? શું છે ગોળ? (આકૃતિઓ)",
+    "exp": "સ્પર્શ અને ગતિ દ્વારા દ્વિપરિમાણીય દેખાવ અને ત્રિપરિમાણીય વસ્તુનો તફાવત સમજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 12: બાળક ગોળ થાળી અને દડાને એકસરખા ગણે છે. કઈ પ્રવૃત્તિ યોગ્ય?",
+    "options": [
+      "બંનેનું નામ લખાવવું",
+      "થાળીને સપાટ રાખી અને દડાને ફેરવી તેમની સપાટી-ઘનતા તથા ગતિ સરખાવવી",
+      "બંનેને રંગાવવાં",
+      "વજન પૂછવું"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૨ – શું છે લાંબુ? શું છે ગોળ? (આકૃતિઓ)",
+    "exp": "થાળી સપાટ આકાર ધરાવે છે, જ્યારે દડો ત્રિપરિમાણીય છે. ગતિ અને સ્પર્શથી તફાવત સ્પષ્ટ થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 13: વસ્તુઓને “ગબડે”, “સરકે”, “બંને કરે” એમ વર્ગીકૃત કરતાં નળાકાર વસ્તુને કયા જૂથમાં મૂકવી?",
+    "options": [
+      "માત્ર ગબડે",
+      "માત્ર સરકે",
+      "પરિસ્થિતિ પ્રમાણે બંને જૂથમાં આવી શકે",
+      "કોઈ જૂથમાં નહીં"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ ૨ – શું છે લાંબુ? શું છે ગોળ? (આકૃતિઓ)",
+    "exp": "નળાકાર વસ્તુની વક્ર સપાટી ગબડે અને સપાટ ભાગ પર સરકી શકે છે. વર્ગીકરણમાં સ્થિતિનો વિચાર જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 14: બાળક ગોળ આકારવાળી તસવીર જોઈને વસ્તુને ગબડતી માને છે. સૌથી સારો અનુસંધાન પ્રશ્ન કયો?",
+    "options": [
+      "તસવીરનો રંગ કયો?",
+      "વાસ્તવિક વસ્તુ હાથમાં હોય તો તેને કઈ રીતે ગતિ કરાવી શકશો?",
+      "કોણે દોર્યું?",
+      "કેટલા અક્ષર છે?"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૨ – શું છે લાંબુ? શું છે ગોળ? (આકૃતિઓ)",
+    "exp": "ચિત્ર પરથી અનુમાનને વાસ્તવિક વસ્તુના પરીક્ષણ સાથે જોડવાથી વૈજ્ઞાનિક-ગાણિતિક વિચાર વિકસે છે."
+  },
+  {
+    "q": "પ્રશ્ન 15: એક જ વસ્તુમાં લંબાઈ અને ગોળાઈ બંને હોય તો શિક્ષક શું શીખવે?",
+    "options": [
+      "એક જ જૂથ સાચું છે",
+      "વર્ગીકરણ હેતુ અને પસંદ કરેલા ગુણધર્મ પર આધારિત છે",
+      "વસ્તુ ખોટી છે",
+      "બાળકને નકલ કરાવવી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૨ – શું છે લાંબુ? શું છે ગોળ? (આકૃતિઓ)",
+    "exp": "વર્ગીકરણ એક નિશ્ચિત ગુણધર્મના આધારે થાય છે; જુદા હેતુથી એ જ વસ્તુ જુદા જૂથમાં આવી શકે."
+  },
+  {
+    "q": "પ્રશ્ન 16: બાળક ૬ વસ્તુઓ ગણે છે, પણ અંતે “કેટલી?” પૂછતાં ફરી ગણે છે. કઈ સમજણ મજબૂત નથી?",
+    "options": [
+      "એક-એક અનુરૂપતા",
+      "છેલ્લો ગણાયેલ અંક સમગ્ર સમૂહ દર્શાવે છે તે કાર્ડિનાલિટી",
+      "રંગ ઓળખ",
+      "ક્રમ યાદ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "છેલ્લો ઉચ્ચારેલો અંક કુલ વસ્તુઓ દર્શાવે છે – આ કાર્ડિનાલિટી છે. ગણતરી અને કુલનો અર્થ જોડવો જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 17: એક જ સંખ્યા ૩ને આંગળીઓથી જુદી રીતે બતાવવાનું શૈક્ષણિક મૂલ્ય કયું?",
+    "options": [
+      "અંકલેખનની ઝડપ",
+      "સંખ્યાનું પરિમાણ એક જ આંગળી-આકારથી બંધાયેલું નથી તે સમજ",
+      "રંગ યાદ",
+      "સમય ઓળખ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "એક જ સંખ્યાની જુદી રજૂઆતથી સંખ્યાની અપરિવર્તિતતા અને ભાગ-સમગ્ર સંબંધ સમજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 18: ૨ પક્ષીથી શરૂઆત થાય છે અને દરેક વખતે એક પક્ષી જોડાય છે. બાળક ક્રમ બોલે છે પણ “દર વખતે કેટલાં વધ્યાં?” ખોટું કહે છે. કઈ સમજણ અધૂરી?",
+    "options": [
+      "એક-એક વધારો",
+      "પક્ષી ઓળખ",
+      "રંગ ઓળખ",
+      "શૂન્ય"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "સંખ્યા શ્રેણી બોલવી અને પરિવર્તન સમજવું જુદું છે. દરેક પગલે એક જ ઉમેરાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 19: બાળક ૪ને ૨+૨ અને ૩+૧ તરીકે રજૂ કરી શકતો નથી. કઈ પ્રવૃત્તિ શ્રેષ્ઠ?",
+    "options": [
+      "૪ અંક લખાવવો",
+      "ચાર કાંકરા જુદી રીતે બે જૂથમાં વહેંચાવવાં",
+      "સંખ્યા ગીત ગવડાવવું",
+      "રંગીન ચિત્ર દોરાવવું"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "ભાગ-સમગ્ર સંબંધથી ૪ની જુદી રચનાઓ સમજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 20: બે જૂથના બાળકોને એક-એક જોડીમાં ઊભા રાખતાં એક જૂથમાં બાળક બાકી રહે છે. આ કઈ સમજણ માટે અસરકારક?",
+    "options": [
+      "માત્ર અંકલેખન",
+      "એક-એક મેળવણીથી વધુ-ઓછું ઓળખવું",
+      "આકાર ઓળખ",
+      "સમય માપન"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "બાકી રહેલો સભ્ય વધુ ધરાવતા જૂથનો દૃશ્ય પુરાવો છે."
+  },
+  {
+    "q": "પ્રશ્ન 21: બાળક ૯ વસ્તુઓ ગણે છે. ગોઠવણી બદલી દેવાથી તે ૮ કહે છે. કઈ પ્રવૃત્તિ યોગ્ય?",
+    "options": [
+      "૯ લખાવવું",
+      "જુદી ગોઠવણીમાં ફરી ગણાવી કુલ અચળ રહે છે તે તપાસવું",
+      "ગીત ગવડાવવું",
+      "રંગ બદલવો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "ગોઠવણી બદલાય છતાં વસ્તુઓની સંખ્યા અચળ રહે છે – સંખ્યા સંરક્ષણનો પાયો."
+  },
+  {
+    "q": "પ્રશ્ન 22: બાળક વસ્તુઓને સ્પર્શ કર્યા વિના ગણતાં એક વસ્તુ બે વાર ગણે છે. કયો આધાર આપવો?",
+    "options": [
+      "દરેક ગણાતી વસ્તુને એકવાર ખસેડવી/ચિહ્નિત કરવી",
+      "અંક દસ વાર લખાવવો",
+      "વસ્તુ છુપાવવી",
+      "માત્ર મૌખિક ગણતરી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "ગણાયેલી વસ્તુને અલગ દર્શાવવાથી પુનરાવર્તન અને છૂટી જવાની ભૂલ ઘટે છે."
+  },
+  {
+    "q": "પ્રશ્ન 23: બાળક વધુ વસ્તુ ધરાવતો સમૂહ ઓળખે છે, પરંતુ “કેટલા વધુ?” કહી શકતો નથી. કયો ઉપાય?",
+    "options": [
+      "સુંદર સમૂહ પૂછવો",
+      "એક-એક મેળવણી કરીને બાકી વસ્તુઓ ગણાવવી",
+      "રંગના નામ પૂછવા",
+      "વસ્તુઓના નામ લખાવવાં"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "એક-એક મેળવણીથી વધારાની વસ્તુઓનો તફાવત સીધો દેખાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 24: બાળક ૧થી ૯ બોલે છે, પણ ૭ વસ્તુઓની ગણતરીમાં ૬ પર અટકે છે. શિક્ષક શું તપાસે?",
+    "options": [
+      "માત્ર અંક ઓળખ",
+      "એક-એક અનુરૂપતા અને ગણતરી ક્રમનું સંકલન",
+      "રંગ ઓળખ",
+      "લંબાઈ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "ગણતરીમાં ક્રમ અને દરેક વસ્તુને એક જ સંખ્યા આપવી બંને જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 25: ત્રણ પક્ષી એક સાથે દેખાય છે, પરંતુ બાળક “૧,૨,૩” કહેતાં એક જ પક્ષી તરફ વારંવાર આંગળી કરે છે. કઈ મુશ્કેલી?",
+    "options": [
+      "કાર્ડિનાલિટી જ માત્ર",
+      "વસ્તુ અને ગણતરી શબ્દ વચ્ચે એક-એક અનુરૂપતા",
+      "દશક જ્ઞાન",
+      "આકાર ઓળખ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "દરેક વસ્તુને એક જ ગણતરી શબ્દ જોડવો એ એક-એક અનુરૂપતા છે."
+  },
+  {
+    "q": "પ્રશ્ન 26: બાળક ૫ વસ્તુ ગણે છે અને પછી વધુ એક ઉમેરાય તો ૬ કહે છે. કઈ સમજણનું નિર્માણ થાય છે?",
+    "options": [
+      "એક વધુનો સંબંધ અને ક્રમિક સંખ્યા",
+      "વજન",
+      "સમય",
+      "પેટર્ન"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૩ – કેરીની મિજબાની (૧ થી ૯ સુધીની સંખ્યાઓ)",
+    "exp": "એક વસ્તુ ઉમેરવાથી સંખ્યા એક વધે છે – ક્રમિક સંખ્યાઓનો આધાર."
+  },
+  {
+    "q": "પ્રશ્ન 27: ટોપલીમાંથી એક પછી એક ફળ કાઢતાં અંતે ટોપલી ખાલી થાય છે. શૂન્યનો યોગ્ય અર્થ કયો?",
+    "options": [
+      "સૌથી નાની વસ્તુ",
+      "સમૂહમાં એકપણ વસ્તુ હાજર નથી",
+      "દસથી એક ઓછું",
+      "ગણતરી શરૂ કરવી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૪ – ૧૦ બનાવીએ (૧૦ થી ૨૦ સુધીની સંખ્યાઓ)",
+    "exp": "શૂન્ય ખાલી સમૂહની સંખ્યા દર્શાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 28: ૧૦ મણકા નજીક ગોઠવતાં બાળક ફરી ૧૨ કહે છે. કઈ સમજણ તપાસવી?",
+    "options": [
+      "સંખ્યા સંરક્ષણ અને એક-એક ગણતરી",
+      "રંગ",
+      "આકાર",
+      "સમય"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૪ – ૧૦ બનાવીએ (૧૦ થી ૨૦ સુધીની સંખ્યાઓ)",
+    "exp": "ગોઠવણી બદલાય છતાં સંખ્યા બદલાતી નથી; પુનરાવર્તન વગર ગણવું પણ જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 29: બાળક ૧૪ને ૧૦ અને ૪ કહે છે, પરંતુ ૧૪ અને ૧૧ની તુલનામાં માત્ર છેલ્લો અંક જુએ છે. કઈ ખામી?",
+    "options": [
+      "દશક-એકમ સ્થાનમૂલ્યનો ઉપયોગ ન કરવો",
+      "રંગ ઓળખ",
+      "શૂન્ય સમજ",
+      "અંકલેખન"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૪ – ૧૦ બનાવીએ (૧૦ થી ૨૦ સુધીની સંખ્યાઓ)",
+    "exp": "બંનેમાં એક દશક છે; પછી એકમોની તુલના કરવી. સ્થાનમૂલ્ય સમજ વિના અંતિમ અંક પર આધાર ખોટો છે."
+  },
+  {
+    "q": "પ્રશ્ન 30: ૩ આંગળીઓ બતાવી બાકીની આંગળીઓથી ૧૦ પૂરું કરાવવાનું મુખ્ય લક્ષ્ય કયું?",
+    "options": [
+      "ક્રમિક ગણતરી",
+      "૧૦ના પૂરક અને ભાગ-સમગ્ર સંબંધ",
+      "લંબાઈ",
+      "સમય"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૪ – ૧૦ બનાવીએ (૧૦ થી ૨૦ સુધીની સંખ્યાઓ)",
+    "exp": "૩ અને ૭ મળીને ૧૦ થાય છે. પૂરકની સમજ આગળના સરવાળા માટે આધાર છે."
+  },
+  {
+    "q": "પ્રશ્ન 31: બાળક ૧૭ને “૧૦ પછી ૭” કહે છે, પણ દસના જૂથ અને એકમમાં ગોઠવી શકતો નથી. શું કરાવવું?",
+    "options": [
+      "૧૭ વારંવાર બોલાવવું",
+      "દસ મણકાનો સમૂહ અને સાત છૂટા મણકા ગોઠવાવવાં",
+      "ઊલટી ગણતરી",
+      "રંગ બદલવો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૪ – ૧૦ બનાવીએ (૧૦ થી ૨૦ સુધીની સંખ્યાઓ)",
+    "exp": "૧૭ = ૧૦ + ૭ની મૂર્ત રચના દશક-એકમનો અર્થ સ્પષ્ટ કરે છે."
+  },
+  {
+    "q": "પ્રશ્ન 32: ૯ પછી ૧૦, પછી ૧૧ ગણે છે, પણ ૧૧ને દસ અને એક તરીકે સમજતો નથી. કઈ પ્રવૃત્તિ?",
+    "options": [
+      "દસ મણકા બાંધી એક દશક અને એક છૂટો મણકો બતાવવો",
+      "અંકલેખન",
+      "રંગ ઓળખ",
+      "માપન"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૪ – ૧૦ બનાવીએ (૧૦ થી ૨૦ સુધીની સંખ્યાઓ)",
+    "exp": "દશક અને એકમની રચના મૂર્ત સમૂહથી સમજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 33: બાળક ૧૮ અને ૧૫માંથી ૧૮ મોટું કહે છે, કારણ કે ૮ મોટું છે. શિક્ષક શું કરે?",
+    "options": [
+      "ફક્ત જવાબ યાદ કરાવે",
+      "એક દશકના સમૂહ સાથે એકમો ગોઠવી તુલના કરાવે",
+      "નામ લખાવે",
+      "ગીત ગવડાવે"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૪ – ૧૦ બનાવીએ (૧૦ થી ૨૦ સુધીની સંખ્યાઓ)",
+    "exp": "બંનેમાં એક દશક છે; એકમ ૮ અને ૫ની તુલના કરવી. સ્થાનમૂલ્ય સાથે સરખામણી શીખવી."
+  },
+  {
+    "q": "પ્રશ્ન 34: બાળક ૭૦ અને ૭ને સમાન માને છે. કયો પ્રશ્ન સ્થાનમૂલ્ય સમજાવશે?",
+    "options": [
+      "કયો અંક સુંદર?",
+      "૭૦માં ૭ કેટલા દશક દર્શાવે છે અને ૭માં કેટલા એકમ?",
+      "નામ કેટલી વાર બોલશો?",
+      "રંગ કયો?"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૪ – ૧૦ બનાવીએ (૧૦ થી ૨૦ સુધીની સંખ્યાઓ)",
+    "exp": "એક જ અંકનું મૂલ્ય તેના સ્થાન પર આધારિત છે: ૭૦માં સાત દશક, ૭માં સાત એકમ."
+  },
+  {
+    "q": "પ્રશ્ન 35: ૧૦ પછી ૧૧, ૧૨ની રચના સમજાવવા કયો વિચાર જરૂરી?",
+    "options": [
+      "૧૦ અને વધારાના એકમ",
+      "માત્ર અંકના આકાર",
+      "રંગોની ગોઠવણી",
+      "લંબાઈ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૪ – ૧૦ બનાવીએ (૧૦ થી ૨૦ સુધીની સંખ્યાઓ)",
+    "exp": "૧૧ એટલે ૧૦+૧ અને ૧૨ એટલે ૧૦+૨. દશક પછી એકમો આગળ વધે છે."
+  },
+  {
+    "q": "પ્રશ્ન 36: ૫+૩=૮ જાણે છે, પરંતુ ૩+૫ માટે ફરી ગણતરી કરે છે. કઈ ચર્ચા યોગ્ય?",
+    "options": [
+      "બંને જુદા દાખલા છે",
+      "જૂથોની જગ્યા બદલીને કુલ સમાન રહે છે તે બતાવવું",
+      "માત્ર જવાબ યાદ કરાવવો",
+      "બાદબાકી શીખવવી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૫ – કેટલા? (એક અંકની સંખ્યાના સરવાળા અને બાદબાકી)",
+    "exp": "સરવાળાની ક્રમવિનિમય સમજથી જૂથોની અદલાબદલી છતાં કુલ અચળ રહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 37: ૪+૨ માટે બાળક ૧થી ૬ સુધી બધું ગણે છે. વધુ કાર્યક્ષમ વ્યૂહ કયો?",
+    "options": [
+      "મોટી સંખ્યાથી આગળ ગણવું",
+      "દરેક વખતે શૂન્ય ઉમેરવું",
+      "અંક ઊલટા લખવા",
+      "જવાબ રટવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૫ – કેટલા? (એક અંકની સંખ્યાના સરવાળા અને બાદબાકી)",
+    "exp": "૪ને સમૂહ તરીકે રાખીને ૫,૬ ગણવાથી પુનરાવર્તન ઘટે છે."
+  },
+  {
+    "q": "પ્રશ્ન 38: ૭−૪ને એક બાળક વસ્તુ દૂર કરીને અને બીજું ૪થી ૭ સુધી આગળ ગણી ઉકેલે છે. યોગ્ય નિવેદન?",
+    "options": [
+      "માત્ર દૂર કરવાની રીત માન્ય",
+      "માત્ર આગળ ગણવાની રીત માન્ય",
+      "બંને ઘટાડો/તફાવત દર્શાવતી માન્ય રીતો",
+      "બંને સરવાળા છે"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ ૫ – કેટલા? (એક અંકની સંખ્યાના સરવાળા અને બાદબાકી)",
+    "exp": "બાદબાકી ઘટાડવા અને બે સંખ્યાઓ વચ્ચેનું અંતર શોધવા બંને રીતે સમજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 39: ૮માંથી ૩ બાળકો ઘરે ગયા – બાળક ૮−૩ ચિહ્ન ઓળખતો નથી. કઈ મુશ્કેલી?",
+    "options": [
+      "પ્રતીકાત્મક ગણતરી જ",
+      "ગણિતીય ક્રિયાને વાર્તા-પરિસ્થિતિ સાથે જોડવી",
+      "અંક ઓળખ",
+      "માપન"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૫ – કેટલા? (એક અંકની સંખ્યાના સરવાળા અને બાદબાકી)",
+    "exp": "વાર્તામાં પ્રારંભિક જથ્થો, દૂર થતી સંખ્યા અને બાકી જથ્થો ઓળખવો જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 40: ૬+૩ માટે મણકાની માળા પર ૬ પછી ત્રણ પગલાં જવાના બદલે બાળક ૬ને ફરી ગણે છે. ભૂલ કઈ?",
+    "options": [
+      "આગળ ગણવામાં પ્રારંભિક સંખ્યા ફરી ગણવી",
+      "રંગ ખોટો",
+      "દશકની ખામી",
+      "સરવાળો અશક્ય"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૫ – કેટલા? (એક અંકની સંખ્યાના સરવાળા અને બાદબાકી)",
+    "exp": "૬થી આગળ ત્રણ એટલે ૭,૮,૯. ૬ને ફરી ગણવું નહીં."
+  },
+  {
+    "q": "પ્રશ્ન 41: ૫ લાલ અને ૩ પીળાં ફૂલ છે. કુલ ૮. પછી “કુલ ૮ અને ૫ લાલ હોય તો પીળાં?” પૂછાય છે. શું ચકાસાય છે?",
+    "options": [
+      "ઝડપ",
+      "ભાગ-સમગ્ર અને અજ્ઞાત ભાગ",
+      "રંગ",
+      "લેખન"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૫ – કેટલા? (એક અંકની સંખ્યાના સરવાળા અને બાદબાકી)",
+    "exp": "પ્રથમ ભાગોથી સમગ્ર; બીજા પ્રશ્નમાં સમગ્ર અને એક ભાગથી બીજો ભાગ શોધાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 42: ૯−૩ માટે બાળક ૯થી પાછળ ૩ પગલાં લે છે. આ પ્રવૃત્તિનો લાભ?",
+    "options": [
+      "શારીરિક ગતિને બાદબાકી સાથે જોડે",
+      "રંગ ઓળખે",
+      "વજન માપે",
+      "પેટર્ન બનાવે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૫ – કેટલા? (એક અંકની સંખ્યાના સરવાળા અને બાદબાકી)",
+    "exp": "સંખ્યા પટ્ટી પર પાછળ કૂદવું દરેક પગલું એક એકમનો ઘટાડો દર્શાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 43: મેજની લંબાઈ હાથની વેંતથી માપતાં બાળકોના જવાબ જુદા આવે છે. યોગ્ય શૈક્ષણિક ઉપયોગ?",
+    "options": [
+      "બધા ખોટા",
+      "એકમનું કદ બદલાય છે તે ચર્ચાવી પ્રમાણભૂત એકમની જરૂર બતાવવી",
+      "મેજ બદલાઈ",
+      "મોટો જવાબ સાચો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૭ – લીનાનો પરિવાર (માપન)",
+    "exp": "બિનપ્રમાણભૂત એકમ વ્યક્તિ પ્રમાણે બદલાય છે. આ અનુભવ પ્રમાણભૂત એકમની જરૂરિયાત તરફ દોરી જાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 44: બે વાંકી દોરીમાંથી લાંબી શોધવી છે. સૌથી વિશ્વસનીય રીત?",
+    "options": [
+      "વધુ વાંકી કરવી",
+      "એક છેડો સમાન બિંદુએ રાખીને સીધી ગોઠવી સરખાવવી",
+      "રંગ જોવો",
+      "અંદાજ લગાવવો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૭ – લીનાનો પરિવાર (માપન)",
+    "exp": "સમાન આધારબિંદુ અને સીધી ગોઠવણીથી લંબાઈની યોગ્ય તુલના થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 45: બાળક માને છે કે મોટો ડબ્બો હંમેશાં ભારે હોય છે. કઈ પ્રવૃત્તિ ગેરસમજ તોડે?",
+    "options": [
+      "બે મોટા ડબ્બા",
+      "મોટો ખાલી ડબ્બો અને નાનો પથ્થર ભરેલો ડબ્બો ત્રાજવે તોલાવવો",
+      "ઊંચાઈ માપવી",
+      "રંગાવવું"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૭ – લીનાનો પરિવાર (માપન)",
+    "exp": "કદ અને વજન જુદા ગુણધર્મ છે. વિરોધાભાસી ઉદાહરણથી ખોટી માન્યતા તપાસાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 46: એક ડોલ ૫ નાના જગથી ભરાય છે, પરંતુ ૨ મોટા જગથી પણ ભરાય છે. યોગ્ય નિષ્કર્ષ?",
+    "options": [
+      "ડોલ બદલાઈ",
+      "મોટા જગની ક્ષમતા વધુ; એકમપાત્રનું કદ ધ્યાનમાં લેવું",
+      "પાણીનું વજન શૂન્ય",
+      "બંને સંખ્યા સરખી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૭ – લીનાનો પરિવાર (માપન)",
+    "exp": "ક્ષમતા માપવામાં એકમપાત્રનું કદ મહત્વનું છે; માત્ર જગની સંખ્યા સરખાવી શકાતી નથી."
+  },
+  {
+    "q": "પ્રશ્ન 47: બે ગ્લાસમાં પાણીનું સ્તર સરખું છે, પરંતુ ગ્લાસ જુદા કદના છે. માત્રા સરખાવવા શું કરવું?",
+    "options": [
+      "પાણી સમાન માપપાત્રમાં રેડવું",
+      "ગ્લાસની ઊંચાઈ જોવી",
+      "રંગ જોવો",
+      "ગ્લાસનું નામ પૂછવું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૭ – લીનાનો પરિવાર (માપન)",
+    "exp": "પાત્રનો આકાર સ્તરને અસર કરે છે. સમાન માપપાત્રમાં રેડવાથી માત્રાની તુલના યોગ્ય બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 48: વ્યક્તિઓની ઊંચાઈ ચિત્રમાં સરખાવતાં એક વ્યક્તિ બેઠેલી છે. કઈ બાબત સ્પષ્ટ કરવી?",
+    "options": [
+      "સમાન આધાર અને ઊભી સ્થિતિ જરૂરી",
+      "ઊંચાઈ રંગથી નક્કી",
+      "બેઠેલો હંમેશાં નાનો",
+      "ચિત્રમાં તુલના અશક્ય"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૭ – લીનાનો પરિવાર (માપન)",
+    "exp": "સ્થિતિ બદલાય તો દેખાતી ઊંચાઈ બદલાય છે. સાચી તુલના માટે સમાન આધાર અને સ્થિતિ જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 49: અંદાજે ભારે લાગતી વસ્તુને ત્રાજવે તોલવાનું શૈક્ષણિક મૂલ્ય?",
+    "options": [
+      "અંદાજ હંમેશાં ખોટો",
+      "અંદાજને માપના પુરાવા સાથે સરખાવી પોતાની માન્યતા તપાસવી",
+      "ત્રાજવું દેખાવ માટે",
+      "વજનનો આકાર જાણી લેવો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૭ – લીનાનો પરિવાર (માપન)",
+    "exp": "અંદાજ પૂર્વધારણા આપે છે; ત્રાજવું સરખામણીનો પુરાવો આપે છે."
+  },
+  {
+    "q": "પ્રશ્ન 50: એક જ વસ્તુને પેન્સિલ અને હાથની વેંતથી માપતાં સંખ્યા જુદી આવે છે. શા માટે?",
+    "options": [
+      "વસ્તુ બદલાય",
+      "એકમની લંબાઈ જુદી",
+      "બાળક ખોટું",
+      "માપન શક્ય નથી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૭ – લીનાનો પરિવાર (માપન)",
+    "exp": "એકમનું કદ બદલાય એટલે આવર્તનોની સંખ્યા બદલાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 51: ૩૭ પછી ૩૮, ૩૯, ૪૦ આવે છે. બાળક ૩૧૦ કહે છે. કઈ ખામી?",
+    "options": [
+      "દશક-એકમ અને દસની સીમા સમજ નબળી",
+      "રંગ ઓળખ",
+      "આકાર ઓળખ",
+      "શૂન્યનો અર્થ જ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૮ – સંખ્યાની રમત (૨૧ થી ૯૯ સુધીની સંખ્યાઓ)",
+    "exp": "૩૯માં ૯ એકમ પછી એક ઉમેરતાં નવો દશક બને છે: ૪૦."
+  },
+  {
+    "q": "પ્રશ્ન 52: ૫૨ કરતાં ૪ વધુ કઈ રીતે સમજાવવું?",
+    "options": [
+      "દશક બદલવો",
+      "દશક ૫ સ્થિર રાખી એકમ ૨થી ૬ કરવો",
+      "૫૨માંથી ૪ ઘટાડવા",
+      "૫૦+૪ કરવું"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૮ – સંખ્યાની રમત (૨૧ થી ૯૯ સુધીની સંખ્યાઓ)",
+    "exp": "૫૨+૪=૫૬; એકમમાં વધારો થાય છે, દશક સ્થિર રહે છે."
+  },
+  {
+    "q": "પ્રશ્ન 53: ૪૮ અને ૫૧ની તુલનામાં બાળક ૪૮ મોટું કહે છે કારણ કે ૮>૧. શું કરાવવું?",
+    "options": [
+      "છેલ્લા અંકની સરખામણી",
+      "દશકના સમૂહો અને સંખ્યા પટ્ટીથી તુલના",
+      "નામ લખાવવું",
+      "એકમ જ ગણાવવું"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૮ – સંખ્યાની રમત (૨૧ થી ૯૯ સુધીની સંખ્યાઓ)",
+    "exp": "૫૧માં પાંચ દશક અને ૪૮માં ચાર દશક છે; પહેલા દશક સરખાવવા જોઈએ."
+  },
+  {
+    "q": "પ્રશ્ન 54: ૬૩ અને ૩૬માં સમાન અંકો છે, પણ જુદી સંખ્યા છે. કઈ સમજણ જરૂરી?",
+    "options": [
+      "અંકસ્થાન બદલાય તો મૂલ્ય બદલાય",
+      "અંકો સમાન એટલે સંખ્યા સમાન",
+      "ક્રમ અગત્યનો નથી",
+      "બંને સરખાં"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૮ – સંખ્યાની રમત (૨૧ થી ૯૯ સુધીની સંખ્યાઓ)",
+    "exp": "૬૩ = ૬ દશક+૩ એકમ; ૩૬ = ૩ દશક+૬ એકમ."
+  },
+  {
+    "q": "પ્રશ્ન 55: ૩૦, ૪૦, ૫૦, __, ૭૦ શ્રેણીમાં ૬૦ કેમ આવે?",
+    "options": [
+      "દરેક પગલે ૧૦ ઉમેરાય",
+      "દરેક પગલે ૧ ઉમેરાય",
+      "છેલ્લો અંક ૦ છે એટલા માટે",
+      "યાદથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૮ – સંખ્યાની રમત (૨૧ થી ૯૯ સુધીની સંખ્યાઓ)",
+    "exp": "દશક શ્રેણીમાં દસનો વધારો થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 56: ૨૯ પછી ૩૦ કેમ આવે છે?",
+    "options": [
+      "નવ એકમ પછી એક ઉમેરતાં દસ એકમનો નવો દશક બને",
+      "સંખ્યા ફરી ૧ થાય",
+      "દશક ઘટે",
+      "માત્ર યાદ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૮ – સંખ્યાની રમત (૨૧ થી ૯૯ સુધીની સંખ્યાઓ)",
+    "exp": "૨૯માં ૨ દશક અને ૯ એકમ છે; એક ઉમેરતાં ૩ દશક થાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 57: બાળક ૭૦ અને ૭ને સમાન ગણે છે. કયો મોડેલ મદદરૂપ?",
+    "options": [
+      "૭ દશકના દસ-દસ મણકા અને ૭ છૂટા મણકા",
+      "રંગીન ચિત્ર",
+      "ઘડિયાળ",
+      "વજનકાંટો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૮ – સંખ્યાની રમત (૨૧ થી ૯૯ સુધીની સંખ્યાઓ)",
+    "exp": "સ્થાનમૂલ્ય મૂર્ત સમૂહથી સમજાય છે: ૭૦ એટલે સાત દશક, ૭ એટલે સાત એકમ."
+  },
+  {
+    "q": "પ્રશ્ન 58: સંખ્યા પટ્ટી પર ૫૮ અને ૬૧ વચ્ચેનું અંતર સમજાવવું હોય તો શું કરવું?",
+    "options": [
+      "બંનેના અંક રંગવા",
+      "પટ્ટી પર ૫૮થી આગળ ત્રણ પગલાં ગણવા",
+      "માત્ર નામ બોલવા",
+      "દશક ભૂલી જવું"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૮ – સંખ્યાની રમત (૨૧ થી ૯૯ સુધીની સંખ્યાઓ)",
+    "exp": "સંખ્યા પટ્ટી ક્રમ અને અંતરનું દૃશ્ય પ્રતિનિધિત્વ આપે છે."
+  },
+  {
+    "q": "પ્રશ્ન 59: લાલ-પીળો-લાલ-પીળો પેટર્નમાં આગળ કયો રંગ? નિયમ શું?",
+    "options": [
+      "લાલ; બે રંગનો એકમ પુનરાવર્તિત થાય છે",
+      "પીળો; એક જ રંગ આવે",
+      "લીલો; પેટર્ન બદલાય",
+      "કોઈપણ રંગ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૯ – તહેવાર (પેટર્ન)",
+    "exp": "પુનરાવર્તિત એકમ લાલ-પીળો છે; આગળ લાલ આવશે."
+  },
+  {
+    "q": "પ્રશ્ન 60: ફૂલ-પાન-પાન-ફૂલ-પાન-પાનમાં પુનરાવર્તિત એકમ કયો?",
+    "options": [
+      "ફૂલ-પાન",
+      "ફૂલ-પાન-પાન",
+      "માત્ર પાન",
+      "ફૂલ-ફૂલ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૯ – તહેવાર (પેટર્ન)",
+    "exp": "ત્રણ ઘટકોનો એકમ વારંવાર આવે છે. એકમ ખોટો ઓળખાય તો આગળનો ક્રમ ખોટો થાય."
+  },
+  {
+    "q": "પ્રશ્ન 61: બાળક પેટર્નનો આગળનો રંગ સાચો મૂકે છે, પરંતુ કારણ કહી શકતો નથી. કયો પ્રશ્ન યોગ્ય?",
+    "options": [
+      "કયો રંગ સુંદર?",
+      "કયો ભાગ વારંવાર આવે છે?",
+      "રંગની જોડણી?",
+      "કેટલા પાનાં?"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૯ – તહેવાર (પેટર્ન)",
+    "exp": "નિયમનું સ્પષ્ટીકરણ પેટર્નની સમજનો પુરાવો છે."
+  },
+  {
+    "q": "પ્રશ્ન 62: ૨,૪,૬,૮ પછી ૧૦ કેમ આવે?",
+    "options": [
+      "દરેક પગલે ૨ ઉમેરાય",
+      "દરેક પગલે ૧ ઘટે",
+      "બધા સમાન",
+      "યાદ છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૯ – તહેવાર (પેટર્ન)",
+    "exp": "સમાન અંતરનું નિયમિત પરિવર્તન પેટર્ન બનાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 63: બાળક બટાકા-ટામેટા-ડુંગળીનો એક જ ક્રમ ગોઠવે છે. આગળની વસ્તુ નક્કી કરવા શું પૂછવું?",
+    "options": [
+      "શાકનું વજન?",
+      "તમે કયો નિયમ બનાવ્યો છે અને કયો ભાગ ફરી આવે છે?",
+      "કોણે આપ્યું?",
+      "કિંમત કેટલી?"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૯ – તહેવાર (પેટર્ન)",
+    "exp": "બાળકનો બનાવેલો નિયમ સમજવાથી પેટર્નનો એકમ અને આગાહી બંને તપાસાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 64: એક તત્વ પેટર્નમાંથી કાઢી નાખતાં બાળક કહે છે કે ક્રમ તૂટી ગયો. આ કઈ સમજણ છે?",
+    "options": [
+      "પુનરાવર્તિત એકમ અને ક્રમની ઓળખ",
+      "રંગ ઓળખ જ",
+      "ગણતરી",
+      "માપન"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૯ – તહેવાર (પેટર્ન)",
+    "exp": "પેટર્નનો એક ભાગ ગાયબ થાય તો નિયમિતતા તૂટે છે; બાળક નિયમ ઓળખે છે."
+  },
+  {
+    "q": "પ્રશ્ન 65: પેટર્નને આગળ વધારતાં બાળક દરેક વખતે નવો રંગ ઉમેરે છે. શિક્ષક શું કરાવે?",
+    "options": [
+      "નિયમિતતા શોધવા પહેલાના ભાગોને જૂથમાં ગોઠવવા",
+      "રંગ યાદ કરાવે",
+      "બધું કાઢી નાખે",
+      "માત્ર નામ લખાવે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૯ – તહેવાર (પેટર્ન)",
+    "exp": "પેટર્ન માટે પુનરાવર્તિત રચના અથવા નિયમ ઓળખવો જરૂરી છે; અનિયમિત ઉમેરો પેટર્ન નથી."
+  },
+  {
+    "q": "પ્રશ્ન 66: બાળક સવાર, બપોર, રાત ઓળખે છે, પરંતુ “નાસ્તા પહેલાં કે શાળા પછી?” ગૂંચવે છે. કઈ પ્રવૃત્તિ?",
+    "options": [
+      "ઘડિયાળના અંક લખાવવાં",
+      "દૈનિક ક્રિયાઓ પહેલાં-પછીના ક્રમમાં ગોઠવવી",
+      "મહિના યાદ કરાવવાં",
+      "સિક્કા ગોઠવવાં"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧૦ – મારી દિનચર્યા (સમય)",
+    "exp": "બાળકના દૈનિક અનુભવથી ક્રમ અને સમય સંબંધ સમજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 67: બે પ્રવૃત્તિમાંથી કઈ વધુ સમય લે છે તે બાળક દેખાવ પરથી નક્કી કરે છે. શું કરવું?",
+    "options": [
+      "મોટી વસ્તુ વધુ સમય લે એવું કહેવું",
+      "પ્રવૃત્તિનો સમય અનુભવાવી/ગણી તુલના કરાવવી",
+      "ચિત્રની લંબાઈ માપવી",
+      "જવાબ યાદ કરાવવો"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧૦ – મારી દિનચર્યા (સમય)",
+    "exp": "સમયનો અંદાજ દેખાવ પરથી નક્કી થતો નથી; પ્રવૃત્તિના આરંભ-અંતનો અનુભવ જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 68: દિવસના સમયખંડનો ક્રમ સમજાવવા કઈ સામગ્રી વધુ યોગ્ય?",
+    "options": [
+      "બાળકની દિનચર્યાના ચિત્રો",
+      "સિક્કા",
+      "આકાર કાર્ડ",
+      "માપપટ્ટી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૦ – મારી દિનચર્યા (સમય)",
+    "exp": "સવાર-બપોર-સાંજ-રાતને પોતાના જીવન સાથે જોડવાથી ક્રમ અર્થપૂર્ણ બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 69: ઉત્તરાયણ, પોંગલ, બિહુ અને લોહરીનો ઉલ્લેખ સમય શિક્ષણમાં શા માટે?",
+    "options": [
+      "નામ રટાવવા",
+      "તહેવાર-ઋતુ-પર્યાવરણના સંબંધથી સમય સમજવો",
+      "માત્ર નકશો",
+      "ઘડિયાળ શીખવવી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧૦ – મારી દિનચર્યા (સમય)",
+    "exp": "સ્થાનિક સાંસ્કૃતિક અનુભવ ઋતુપરિવર્તન અને સમયને જીવન સાથે જોડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 70: બાળક કહે છે રાત પછી સવાર આવે છે, પણ બપોર-સાંજ ગૂંચવે છે. કઈ રીત?",
+    "options": [
+      "સમયખંડના ચિત્રો પોતાની પ્રવૃત્તિ સાથે ગોઠવવા",
+      "માત્ર મહિના લખવા",
+      "વજન માપવું",
+      "નાણાં ગણવા"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૦ – મારી દિનચર્યા (સમય)",
+    "exp": "દિનચર્યાનો ક્રમ અનુભવ આધારિત છે; માત્ર શબ્દ યાદ કરાવવાથી સંબંધ સ્થિર થતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 71: ધોરણ-૧માં સમયની સમજ માટે ઘડિયાળ વાંચન પહેલાં શું અગત્યનું?",
+    "options": [
+      "કલાકના અંક યાદ",
+      "દૈનિક ક્રમ, પહેલાં-પછી અને સમયખંડનો અનુભવ",
+      "કેલેન્ડરનાં બધા મહિના",
+      "સેકન્ડની ગણતરી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧૦ – મારી દિનચર્યા (સમય)",
+    "exp": "અનુભવ આધારિત સમયજ્ઞાન ઔપચારિક ઘડિયાળ વાંચનનો પાયો છે."
+  },
+  {
+    "q": "પ્રશ્ન 72: બાળક કહે છે કે રાત્રિભોજન સવારના નાસ્તા પહેલાં થાય છે. શિક્ષક શું કરાવે?",
+    "options": [
+      "ખોટું કહી દે",
+      "દિનચર્યાના ચિત્રો ગોઠવી પહેલાં-પછીનો તર્ક સમજાવે",
+      "રંગ ઓળખાવે",
+      "અંક લખાવે"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧૦ – મારી દિનચર્યા (સમય)",
+    "exp": "ક્રમ ગોઠવવા બાળકને સમયની ઘટનાઓનું સંબંધિત સ્થાન સમજવું પડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 73: દરેક પાત્રમાં ૩ જલેબી છે અને ૬ પાત્ર છે. બાળક ૩+૬=૯ કહે છે. કઈ સમજણ શીખવવી?",
+    "options": [
+      "સમાન જૂથોના પુનરાવર્તિત સરવાળા",
+      "અલગ સંખ્યાનો સરવાળો",
+      "બાદબાકી",
+      "સ્થાનમૂલ્ય"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૧ – કેટલી વાર? (ગુણાકાર)",
+    "exp": "૬ જૂથમાં ૩ એટલે ૩+૩+૩+૩+૩+૩=૧૮. ગુણાકારનો આધાર સમાન જૂથો છે."
+  },
+  {
+    "q": "પ્રશ્ન 74: “૪ વખત ૨”નો યોગ્ય અર્થ કયો?",
+    "options": [
+      "૨માં ૪ ઉમેરવું",
+      "૨ના ચાર સમાન જૂથોનું કુલ",
+      "૪ના બે જૂથ",
+      "૨માંથી ૪ ઘટાડવું"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧૧ – કેટલી વાર? (ગુણાકાર)",
+    "exp": "૪ વખત ૨ એટલે ૨+૨+૨+૨. જૂથોની સંખ્યા અને જૂથનું કદ ઓળખવું."
+  },
+  {
+    "q": "પ્રશ્ન 75: ૫ જૂથમાં ૨ અને ૨ જૂથમાં ૫ – બંનેનો કુલ ૧૦ છે. કયું નિવેદન યોગ્ય?",
+    "options": [
+      "રચના પણ સમાન છે",
+      "કુલ સમાન, પરંતુ જૂથોની સંખ્યા અને જૂથનું કદ જુદાં",
+      "ગુણાકારમાં જૂથ અગત્યનાં નથી",
+      "એક જ રીત સાચી"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧૧ – કેટલી વાર? (ગુણાકાર)",
+    "exp": "૫×૨ અને ૨×૫નું કુલ સમાન છે, પરંતુ જૂથોની રચના અલગ છે."
+  },
+  {
+    "q": "પ્રશ્ન 76: ૫ હરોળમાં દરેકમાં ૩ બાળકો હોય તો યોગ્ય રજૂઆત કઈ?",
+    "options": [
+      "૩+૩+૩+૩+૩",
+      "૩+૫",
+      "૪+૫+૩",
+      "૩−૫"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૧ – કેટલી વાર? (ગુણાકાર)",
+    "exp": "પાંચ સમાન જૂથમાં ત્રણ-ત્રણ બાળકો એટલે પુનરાવર્તિત સરવાળો."
+  },
+  {
+    "q": "પ્રશ્ન 77: બાળક ૨+૨+૨+૨ને ૮ કહે છે. “૪ વખત ૨” સમજાવવા કઈ રજૂઆત?",
+    "options": [
+      "૨ના ચાર સમાન જૂથો દોરવા",
+      "૨ અને ૪ના બે અલગ જૂથ",
+      "૪માંથી ૨ કાઢવા",
+      "૨ વસ્તુને ચાર રંગમાં રંગવી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૧ – કેટલી વાર? (ગુણાકાર)",
+    "exp": "જૂથ મોડેલ પુનરાવર્તિત સરવાળાને દૃશ્ય બનાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 78: દરેક ટેબલ પર ૪ ખુરશી છે અને ૩ ટેબલ છે. કુલ ખુરશી શોધતાં બાળક ૪+૩ કરે છે. કઈ ભૂલ?",
+    "options": [
+      "જૂથોની સંખ્યા અને જૂથનું કદ ભેળવી દેવું",
+      "રંગ ઓળખ",
+      "સમયક્રમ",
+      "વજન"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૧ – કેટલી વાર? (ગુણાકાર)",
+    "exp": "ત્રણ જૂથમાં ચાર એટલે ૪+૪+૪=૧૨. જૂથનું કદ અને જૂથોની સંખ્યા અલગ ઓળખવી."
+  },
+  {
+    "q": "પ્રશ્ન 79: ગુણાકારની પૂર્વધારણા વિકસાવવા કઈ પરિસ્થિતિ વધુ યોગ્ય?",
+    "options": [
+      "અલગ-અલગ સંખ્યાના રમકડાં",
+      "સમાન સંખ્યાના મણકાવાળા અનેક થેલા",
+      "વિવિધ રંગનાં પાન",
+      "ઊંચાઈ તુલના"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧૧ – કેટલી વાર? (ગુણાકાર)",
+    "exp": "સમાન જૂથો ગુણાકારનું મૂળ મોડેલ છે."
+  },
+  {
+    "q": "પ્રશ્ન 80: ₹૧૦નો એક સિક્કો અને ₹૫ના બે સિક્કા અંગે યોગ્ય નિવેદન?",
+    "options": [
+      "સિક્કાની સંખ્યા સમાન એટલે મૂલ્ય સમાન",
+      "બંનેનું કુલ મૂલ્ય ₹૧૦ છે",
+      "₹૫ના બે સિક્કા ₹૧૦થી વધારે",
+      "₹૧૦નું મૂલ્ય બદલાય"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧૨ – આપણે કેટલો ખર્ચ કરી શકીએ? (નાણું)",
+    "exp": "સિક્કાની સંખ્યા અને કુલ મૂલ્ય જુદા છે; બંને રચનાઓ સમકક્ષ છે."
+  },
+  {
+    "q": "પ્રશ્ન 81: ₹૨૦થી ₹૧૨ની વસ્તુ ખરીદતાં ₹૧૦ પરત મળે છે. શું સાચું?",
+    "options": [
+      "₹૮ પરત મળવા જોઈએ",
+      "₹૧૦ પરત સાચાં",
+      "₹૩૨ ખર્ચ",
+      "₹૧૨ પરત"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૨ – આપણે કેટલો ખર્ચ કરી શકીએ? (નાણું)",
+    "exp": "₹૨૦−₹૧૨=₹૮. ચુકવણી, કિંમત અને બાકી રકમનો સંબંધ સમજવો."
+  },
+  {
+    "q": "પ્રશ્ન 82: ₹૧૫ને ₹૧૦+₹૫ અથવા ₹૫+₹૫+₹૫થી બનાવી શકાય. કઈ સમજણ?",
+    "options": [
+      "સમાન મૂલ્યની જુદી રચનાઓ",
+      "સિક્કાની સંખ્યા જ મૂલ્ય",
+      "₹૫=₹૧૦",
+      "માત્ર ગણતરી ઝડપ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૨ – આપણે કેટલો ખર્ચ કરી શકીએ? (નાણું)",
+    "exp": "એક જ કુલ રકમ જુદા સિક્કા સંયોજનથી બને છે; સમકક્ષતા સમજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 83: દુકાનદાર-ગ્રાહકની રમતનો વ્યાપક લાભ કયો?",
+    "options": [
+      "માત્ર સિક્કા ઓળખ",
+      "ગણતરી, મૂલ્ય, સરવાળો-બાદબાકી, સંવાદ અને નિર્ણય",
+      "માત્ર લખાણ",
+      "માત્ર વર્ગીકરણ"
+    ],
+    "ans": 1,
+    "unit": "પ્રકરણ ૧૨ – આપણે કેટલો ખર્ચ કરી શકીએ? (નાણું)",
+    "exp": "રોલ-પ્લે વાસ્તવિક નાણાકીય વ્યવહાર અને સામાજિક સંવાદ જોડે છે."
+  },
+  {
+    "q": "પ્રશ્ન 84: ₹૧૭ બનાવવા બાળક ₹૧૦+₹૫+₹૨ પસંદ કરે છે. આ કઈ ક્ષમતા?",
+    "options": [
+      "મૂલ્યોનું સંયોજન કરીને નિર્ધારિત રકમ બનાવવી",
+      "માત્ર સિક્કા ઓળખ",
+      "નાણાંની ગેરસમજ",
+      "માત્ર અંદાજ"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૨ – આપણે કેટલો ખર્ચ કરી શકીએ? (નાણું)",
+    "exp": "જુદા મૂલ્યોને જોડીને નિર્ધારિત કુલ બનાવવું નાણાકીય સંખ્યાજ્ઞાન છે."
+  },
+  {
+    "q": "પ્રશ્ન 85: ઓછામાં ઓછા સિક્કાથી ₹૪૯ બનાવવાની વ્યૂહરચના કઈ?",
+    "options": [
+      "મોટા મૂલ્યના ઉપલબ્ધ સિક્કાથી શરૂઆત કરી બાકી રકમ રચવી",
+      "બધા સિક્કા સમાન ગણવા",
+      "૪૯ એક રૂપિયાના સિક્કા જ",
+      "રંગ ગોઠવવા"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૨ – આપણે કેટલો ખર્ચ કરી શકીએ? (નાણું)",
+    "exp": "ઓછા સિક્કા માટે મોટા મૂલ્યોનો કાર્યક્ષમ ઉપયોગ અને બાકી રકમનું વિઘટન જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 86: બાળક ભાવ વાંચે છે પણ બાકી રકમ કાઢી શકતો નથી. કઈ સહાય?",
+    "options": [
+      "ચુકવેલી રકમમાંથી કિંમત ઘટાડતી ખરીદીની ભૂમિકા-રમત",
+      "વસ્તુઓનાં નામ લખાવવાં",
+      "ચિત્ર રંગાવવાં",
+      "સિક્કાની સંખ્યા ગણી દેવી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૨ – આપણે કેટલો ખર્ચ કરી શકીએ? (નાણું)",
+    "exp": "વાસ્તવિક ખરીદીમાં ચુકવણી અને પરત રકમનો સંબંધ અનુભવથી સમજાય છે."
+  },
+  {
+    "q": "પ્રશ્ન 87: ₹૨૦ને ₹૧૦+₹૧૦ અને ₹૫+₹૫+₹૫+₹૫ એમ બનાવે છે. કઈ સમજણ?",
+    "options": [
+      "સમાન કુલ મૂલ્યની વિવિધ રચનાઓ",
+      "મોટા સિક્કા ઓછા મૂલ્યના",
+      "સિક્કા સંખ્યા જ કુલ",
+      "₹૫ અને ₹૧૦ સમાન"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૨ – આપણે કેટલો ખર્ચ કરી શકીએ? (નાણું)",
+    "exp": "સમાન રકમના જુદા સંયોજનથી સમકક્ષતા અને લવચીક ગણતરી વિકસે છે."
+  },
+  {
+    "q": "પ્રશ્ન 88: ચિત્રમાં કાર ૫, બોલ ૩, ઢીંગલી ૫ છે. બાળક ચિત્રના કદ પરથી સંખ્યા નક્કી કરે છે. કઈ ખામી?",
+    "options": [
+      "ચિત્રના કદ અને દર્શાવાતી સંખ્યાનો ભેદ ન સમજવો",
+      "આકાર ઓળખ",
+      "સમયક્રમ",
+      "વજન"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૩ – રમકડાં જ રમકડાં (માહિતી સંચાલન)",
+    "exp": "માહિતી વાંચતી વખતે ચિત્રનું કદ નહીં, દર્શાવેલા ચિહ્નો/કીની સંખ્યા જોવી."
+  },
+  {
+    "q": "પ્રશ્ન 89: ચિત્રલેખમાં એક કારનું ચિહ્ન ૨ કાર દર્શાવે છે. પાંચ ચિહ્નો હોય તો કુલ કેટલા?",
+    "options": [
+      "૫",
+      "૭",
+      "૧૦",
+      "૧૨"
+    ],
+    "ans": 2,
+    "unit": "પ્રકરણ ૧૩ – રમકડાં જ રમકડાં (માહિતી સંચાલન)",
+    "exp": "દરેક ચિહ્નનું મૂલ્ય ૨ છે; પાંચ ચિહ્ન એટલે ૫×૨=૧૦."
+  },
+  {
+    "q": "પ્રશ્ન 90: મતદાનમાં દરેક બાળકનો મત નોંધવો છે. વિશ્વસનીય માહિતી માટે શું જરૂરી?",
+    "options": [
+      "દરેક મત એકસરખી પદ્ધતિથી નોંધવો",
+      "માત્ર લોકપ્રિય વિકલ્પ લખવો",
+      "અંદાજે ગણવું",
+      "ચિત્ર મોટું દોરવું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૩ – રમકડાં જ રમકડાં (માહિતી સંચાલન)",
+    "exp": "એકસરખી નોંધણી વગર ગણતરી અને સરખામણી વિશ્વસનીય રહેતી નથી."
+  },
+  {
+    "q": "પ્રશ્ન 91: બે રમકડાં શ્રેણી એક-એક સામે ગોઠવતાં એકમાં ત્રણ વસ્તુ બાકી રહે છે. શું જાણી શકાય?",
+    "options": [
+      "બાકી રહેલી શ્રેણીમાં ત્રણ વધુ છે",
+      "બંને સમાન",
+      "કોઈ તફાવત નથી",
+      "માત્ર રંગ જુદો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૩ – રમકડાં જ રમકડાં (માહિતી સંચાલન)",
+    "exp": "એક-એક મેળવણીથી બાકી રહેલી વસ્તુઓ તફાવત બતાવે છે."
+  },
+  {
+    "q": "પ્રશ્ન 92: માહિતીમાં બે શ્રેણી ૪ અને ૪ છે, ત્રીજી ૨ છે. “બધી સમાન” કહેતા બાળકને કયો પ્રશ્ન?",
+    "options": [
+      "ત્રીજી શ્રેણી બાકીની બંનેથી કેટલી જુદી છે?",
+      "કોષ્ટકનો રંગ?",
+      "અંક મોટો?",
+      "વસ્તુ સુંદર?"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૩ – રમકડાં જ રમકડાં (માહિતી સંચાલન)",
+    "exp": "બે શ્રેણી સમાન હોવા છતાં ત્રીજી જુદી છે; દરેક શ્રેણી અલગ વાંચવી."
+  },
+  {
+    "q": "પ્રશ્ન 93: “જો લાલ પસંદ કરનાર બે વધુ થાય તો શું બદલાશે?” આ કઈ ક્ષમતા તપાસે છે?",
+    "options": [
+      "માહિતી આધારિત અનુમાન અને વિશ્લેષણ",
+      "યાદશક્તિ",
+      "અંકલેખન",
+      "આકાર"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૩ – રમકડાં જ રમકડાં (માહિતી સંચાલન)",
+    "exp": "હાલની માહિતીમાં ફેરફાર કરીને નવી સ્થિતિનું અનુમાન કરવું વિશ્લેષણાત્મક વિચાર છે."
+  },
+  {
+    "q": "પ્રશ્ન 94: ચિત્રલેખમાં કારનું ચિહ્ન ૨ અને બોલનું ૫ દર્શાવે છે. બાળક માત્ર ચિહ્નો ગણે છે. શું શીખવવું?",
+    "options": [
+      "દરેક ચિહ્નની કી મુજબ કિંમત લાગુ કરવી",
+      "બધાં ચિહ્ન સમાન",
+      "ચિત્ર અવગણવું",
+      "રંગ ગણવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ ૧૩ – રમકડાં જ રમકડાં (માહિતી સંચાલન)",
+    "exp": "ચિત્રલેખની કી વાંચવી અને દરેક ચિહ્નનું મૂલ્ય લાગુ કરવું જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 95: પાઠમાં માત્ર સાચો-ખોટો જવાબ માપવામાં આવે તો કઈ બાબત ચૂકી જાય?",
+    "options": [
+      "વિચારપ્રક્રિયા, વ્યૂહરચના અને ગાણિતિક સંચાર",
+      "માત્ર હાજરી",
+      "માત્ર ઝડપ",
+      "માત્ર લેખન"
+    ],
+    "ans": 0,
+    "unit": "પુસ્તક વિશે / પાયાનો તબક્કો – શિક્ષણશાસ્ત્રીય અભિગમ",
+    "exp": "મૌખિક ચર્ચા અને પ્રવૃત્તિ બાળકની વિચારપ્રક્રિયા બહાર લાવે છે; અંતિમ જવાબ પૂરતો નથી."
+  },
+  {
+    "q": "પ્રશ્ન 96: બાળક કોયડાનો ઉકેલ એક અઠવાડિયા પછી આપે છે અને જુદા રસ્તા અજમાવે છે. આ અભિગમનું મૂલ્ય?",
+    "options": [
+      "માત્ર જવાબ યાદ",
+      "ધીમી વિચારપ્રક્રિયા, પ્રયત્ન અને બહુવિધ ઉકેલને અવકાશ",
+      "મૂલ્યાંકન ટાળવું",
+      "શિક્ષક તૈયારી ન કરે"
+    ],
+    "ans": 1,
+    "unit": "પુસ્તક વિશે / પાયાનો તબક્કો – શિક્ષણશાસ્ત્રીય અભિગમ",
+    "exp": "કોયડાઓ માટે સમય આપવાથી પ્રયત્ન, શોધ અને વૈકલ્પિક ઉકેલ વિકસે છે."
+  },
+  {
+    "q": "પ્રશ્ન 97: મણકા ગોઠવવા, પછી ચિત્રમાં બતાવવું, અંતે ૭+૩=૧૦ લખાવવું – કયો ક્રમ?",
+    "options": [
+      "અમૂર્તથી મૂર્ત",
+      "મૂર્તથી ચિત્રાત્મક અને પછી પ્રતીકાત્મક",
+      "માત્ર રટણ",
+      "માત્ર ભાષા"
+    ],
+    "ans": 1,
+    "unit": "પુસ્તક વિશે / પાયાનો તબક્કો – શિક્ષણશાસ્ત્રીય અભિગમ",
+    "exp": "મૂર્ત અનુભવથી ચિત્ર અને પછી પ્રતીકાત્મક રજૂઆત તરફ જવું પાયાના તબક્કાનો યોગ્ય ક્રમ છે."
+  },
+  {
+    "q": "પ્રશ્ન 98: બે બાળકોના પૂર્વજ્ઞાન જુદા છે. શિક્ષક શું કરે?",
+    "options": [
+      "બંનેને સમાન ગતિ અને આધાર",
+      "જરૂરિયાત પ્રમાણે જુદા આધાર/પડકારથી સમાન શીખવાના લક્ષ્ય તરફ દોરી જાય",
+      "નવા બાળકને ગણિતમાંથી મુક્ત",
+      "એક બાળકને શિક્ષક બનાવે"
+    ],
+    "ans": 1,
+    "unit": "પુસ્તક વિશે / પાયાનો તબક્કો – શિક્ષણશાસ્ત્રીય અભિગમ",
+    "exp": "બાળકોના અગાઉના સંખ્યાત્મક અનુભવો જુદા હોઈ શકે છે; ભિન્ન આધાર જરૂરી છે."
+  },
+  {
+    "q": "પ્રશ્ન 99: બાળક વસ્તુઓ યોગ્ય પસંદ કરે છે, પણ એક વસ્તુ બે વાર ગણે છે. મૂલ્યાંકન કેવી રીતે?",
+    "options": [
+      "ખોટો જવાબ એટલે અસમર્થ",
+      "પ્રક્રિયા નિરીક્ષણથી એક-એક ગણતરીની મુશ્કેલી ઓળખવી",
+      "પાઠ રટાવવો",
+      "પ્રશ્ન કાઢવો"
+    ],
+    "ans": 1,
+    "unit": "પુસ્તક વિશે / પાયાનો તબક્કો – શિક્ષણશાસ્ત્રીય અભિગમ",
+    "exp": "પ્રક્રિયા જોવાથી ચોક્કસ ભૂલ ઓળખાય છે; ઉપચારાત્મક શિક્ષણ વધુ લક્ષિત બને છે."
+  },
+  {
+    "q": "પ્રશ્ન 100: “તમને આ જવાબ કેમ આવ્યો?” પૂછવાનો મુખ્ય લાભ?",
+    "options": [
+      "પરીક્ષા લાંબી",
+      "વિચારપ્રક્રિયા અને ગાણિતિક સંચાર દેખાય",
+      "લેખન ઝડપ",
+      "બધા સમાન જવાબ"
+    ],
+    "ans": 1,
+    "unit": "પુસ્તક વિશે / પાયાનો તબક્કો – શિક્ષણશાસ્ત્રીય અભિગમ",
+    "exp": "બાળક પોતાનો તર્ક વ્યક્ત કરે છે; શિક્ષક સમજણનું મૂલ્યાંકન કરી શકે છે."
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "TET-1 આનંદદાયી ગણિત - ધોરણ 1",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "pro",
+            testFileName: "std1maths.html",
+            testUploadDate: "2026-11-19"
+        })
+    });
+}
+</script>
+</body>
+</html>
