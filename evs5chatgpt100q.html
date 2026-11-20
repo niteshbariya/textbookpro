@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TET–1 પરીક્ષા તૈયારી: ધોરણ 5 – પર્યાવરણ : આસપાસ (HOTS) | ૧૦૦ પ્રશ્નો</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            --header-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+            --card-gradient: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+            --bg-color: #f1f5f9;
+            --container-bg: #ffffff;
+            --text-color: #0f172a;
+            --heading-color: #1e3a8a;
+            --subheading-color: #64748b;
+            --border-color: #cbd5e1;
+            --card-border: #e2e8f0;
+            --option-bg: #f8fafc;
+            --option-hover: #ede9fe;
+            --option-border: #cbd5e1;
+            --badge-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --correct-bg: #ecfdf5;
+            --correct-border: #34d399;
+            --correct-text: #065f46;
+            --wrong-bg: #fff1f2;
+            --wrong-border: #fb7185;
+            --wrong-text: #9f1239;
+            --exp-box-bg: #f8fafc;
+            --input-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.12), 0 8px 10px -6px rgba(30, 58, 138, 0.08);
+            
+            /* Status Colors */
+            --color-answered: #10b981;
+            --color-flagged: #f59e0b;
+            --color-unanswered: #94a3b8;
+            --color-current: #2563eb;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #ec4899 100%);
+            --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            --card-gradient: linear-gradient(135deg, #1e1b4b 0%, #1e293b 50%, #0f172a 100%);
+            --bg-color: #030712;
+            --container-bg: #0b1329;
+            --text-color: #f8fafc;
+            --heading-color: #93c5fd;
+            --subheading-color: #94a3b8;
+            --border-color: #334155;
+            --card-border: #1e293b;
+            --option-bg: #1e293b;
+            --option-hover: #2e1065;
+            --option-border: #475569;
+            --badge-bg: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --correct-bg: #064e3b;
+            --correct-border: #059669;
+            --correct-text: #a7f3d0;
+            --wrong-bg: #881337;
+            --wrong-border: #e11d48;
+            --wrong-text: #fecdd3;
+            --exp-box-bg: #0f172a;
+            --input-bg: #1e293b;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { 
+            font-family: 'Noto Sans Gujarati', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            padding: 14px; 
+            display: flex; 
+            justify-content: center; 
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .container { 
+            background-color: var(--container-bg); 
+            max-width: 1000px; 
+            width: 100%; 
+            border-radius: 18px; 
+            box-shadow: var(--shadow); 
+            padding: 24px; 
+            position: relative;
+            border: 1.5px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 6px; }
+            .container { padding: 14px; border-radius: 12px; }
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-pill {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 800;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--option-bg);
+            color: var(--text-color);
+            border: 1.5px solid var(--border-color);
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.04);
+            border-color: #3b82f6;
+        }
+
+        .banner-title {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 5px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .banner-sub {
+            color: var(--subheading-color);
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Login Screen */
+        #loginScreen {
+            max-width: 480px;
+            margin: 15px auto;
+            background: var(--card-gradient);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-color);
+        }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 13.5px; color: var(--heading-color); }
+        input[type="text"], input[type="tel"], input[type="email"] { 
+            width: 100%; 
+            padding: 11px 14px; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 8px; 
+            font-size: 14.5px; 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+
+        .btn-gradient { 
+            background: var(--primary-gradient); 
+            color: white; 
+            border: none; 
+            padding: 12px 18px; 
+            font-size: 15px; 
+            font-weight: 800; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.25s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            font-family: inherit;
+        }
+        .btn-gradient:hover { opacity: 0.95; transform: translateY(-1.5px); }
+        .btn-gradient:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .otp-box { 
+            background: var(--container-bg); 
+            border: 2px dashed #3b82f6; 
+            padding: 16px; 
+            border-radius: 10px; 
+            margin-top: 16px; 
+            display: none; 
+            text-align: center;
+        }
+
+        /* Test Main Layout: Single column (Questions on Top, Palette at Bottom) */
+        .quiz-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .quiz-main-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .quiz-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1.5px solid var(--border-color); 
+            padding-bottom: 12px; 
+            margin-bottom: 18px; 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .timer-badge { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: #ef4444; 
+            background: #fee2e2;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        body.dark-mode .timer-badge { background: #450a0a; color: #fca5a5; }
+
+        .unit-badge { 
+            display: inline-block; 
+            background: var(--badge-bg); 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            margin-bottom: 14px; 
+        }
+
+        .question-text {
+            font-size: 18px;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            white-space: pre-wrap;
+            tab-size: 4;
+        }
+
+        .option-label { 
+            display: flex;
+            align-items: center;
+            background: var(--option-bg); 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            line-height: 1.5; 
+            border: 1.5px solid var(--option-border); 
+            transition: all 0.2s;
+            font-size: 15.5px;
+        }
+        .option-label:hover { 
+            background: var(--option-hover); 
+            border-color: #3b82f6;
+            transform: translateX(4px);
+        }
+        .option-label input[type="radio"] {
+            margin-right: 14px;
+            transform: scale(1.25);
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        .quiz-actions-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1.5px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-buttons-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-prev, .btn-next, .btn-flag {
+            padding: 10px 18px;
+            font-size: 14.5px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+        }
+        .btn-prev { background: #64748b; color: white; }
+        .btn-prev:hover { background: #475569; }
+        .btn-next { background: var(--primary-gradient); color: white; }
+        .btn-next:hover { opacity: 0.95; }
+
+        .btn-flag {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1.5px solid #f59e0b;
+        }
+        body.dark-mode .btn-flag {
+            background: #451a03;
+            color: #fde68a;
+            border-color: #d97706;
+        }
+        .btn-flag.active-flag {
+            background: #f59e0b;
+            color: white;
+            border-color: #b45309;
+        }
+
+        /* Question Palette at the Bottom */
+        .palette-bottom-card {
+            background: var(--card-gradient);
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .palette-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--heading-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .legend-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-dot { width: 11px; height: 11px; border-radius: 50%; }
+
+        /* Multi-column grid for 100 questions */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 8px;
+            max-height: 250px;
+            overflow-y: auto;
+            padding: 6px 4px;
+        }
+        .q-pill {
+            padding: 8px 0;
+            border-radius: 7px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+            transition: all 0.15s ease;
+            position: relative;
+        }
+        .q-pill:hover { transform: scale(1.08); z-index: 2; }
+        .q-pill.status-current {
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 2.5px #2563eb;
+            font-weight: 900;
+        }
+        .q-pill.status-answered {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #059669 !important;
+        }
+        .q-pill.status-flagged {
+            background: #f59e0b !important;
+            color: white !important;
+            border-color: #d97706 !important;
+        }
+        .q-pill.status-flagged::after {
+            content: '🚩';
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            font-size: 9px;
+        }
+
+        /* Result Screen Styles */
+        .result-summary-card {
+            background: var(--card-gradient);
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .score-pill {
+            display: inline-block;
+            font-size: 32px;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 6px 0;
+        }
+
+        .res-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+        @media (max-width: 600px) {
+            .res-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .res-stat-box {
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Result Tabs Navigation */
+        .result-tabs-nav {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .res-tab-btn {
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 800;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid var(--border-color);
+            background: var(--option-bg);
+            color: var(--text-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .res-tab-btn:hover { border-color: #2563eb; }
+        .res-tab-btn.active-tab {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Review Item Style */
+        .review-item {
+            padding: 16px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            border: 1.5px solid var(--card-border);
+            transition: all 0.2s;
+            background: var(--container-bg);
+        }
+        .review-item.is-correct {
+            background-color: var(--correct-bg);
+            border-color: var(--correct-border);
+            color: var(--correct-text);
+        }
+        .review-item.is-wrong {
+            background-color: var(--wrong-bg);
+            border-color: var(--wrong-border);
+            color: var(--wrong-text);
+        }
+
+        .exp-box {
+            background: var(--exp-box-bg);
+            color: var(--text-color);
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            border-left: 4px solid #2563eb;
+        }
+
+        .blank-q-card {
+            background: var(--container-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+        }
+
+        .msg-box {
+            display: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 13.5px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .msg-error { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+        .msg-info { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- હેડર અને થીમ ટોગલ -->
+    <header class="header-top">
+        <span class="tag-pill"><i class="fa-solid fa-leaf"></i> TET–1 પરીક્ષા તૈયારી: ધોરણ 5 – પર્યાવરણ : આસપાસ (HOTS)</span>
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleDarkMode()">
+            <i class="fa-solid fa-moon"></i> ડાર્ક મોડ
+        </button>
+    </header>
+
+    <!-- નોટિસ બોક્સ -->
+    <div id="noticeMsg" class="msg-box"></div>
+
+    <!-- ૧. પ્રવેશ અને OTP સ્ક્રીન -->
+    <section id="loginScreen">
+        <div style="text-align: center; margin-bottom: 18px;">
+            <div style="font-size: 32px; color: #2563eb; margin-bottom: 4px;"><i class="fa-solid fa-earth-asia"></i></div>
+            <h1 class="banner-title" style="font-size: 20px;">TET–1 પર્યાવરણ : આસપાસ (ધોરણ 5) – ૧૦૦ HOTS પ્રશ્નો</h1>
+            <p class="banner-sub" style="margin-bottom: 10px;">અવલોકન, તર્ક, વિશ્લેષણ, કારણ–પરિણામ અને સંકલ્પનાની સમજ આધારિત ૧૦૦ ઉચ્ચ કઠિનતામૂલ્ય (HOTS) પ્રશ્નો</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">👤 પૂરું નામ:</label>
+            <input type="text" id="name" placeholder="તમારું પૂરું નામ દાખલ કરો">
+        </div>
+        <div class="form-group">
+            <label for="phone">📱 મોબાઇલ નંબર:</label>
+            <input type="tel" id="phone" placeholder="૧૦ અંકનો સાચો મોબાઇલ નંબર" maxlength="10">
+        </div>
+        <div class="form-group">
+            <label for="email">📧 ઇમેઇલ આઇડી:</label>
+            <input type="email" id="email" placeholder="તમારું સાચું ઈમેઈલ આઈડી લખો">
+        </div>
+
+        <button id="getOtpBtn" class="btn-gradient" onclick="requestOTP()">
+            <i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો
+        </button>
+
+        <div id="otpContainer" class="otp-box">
+            <p style="margin: 0 0 10px 0; color: var(--heading-color); font-weight: 700; font-size: 13px;">
+                📩 આપના ઈમેઈલ પર ૪ અંકનો સુરક્ષિત OTP મોકલવામાં આવ્યો છે:
+            </p>
+            <div class="form-group" style="max-width: 200px; margin: 0 auto 12px auto;">
+                <input type="text" id="otpInput" placeholder="૪ અંક OTP" maxlength="4" style="text-align: center; font-size: 20px; letter-spacing: 5px; font-weight: 800;">
+            </div>
+            <button id="verifyBtn" class="btn-gradient" onclick="verifyAndStart()" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                <i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો
+            </button>
+        </div>
+    </section>
+
+    <!-- ૨. મોક ટેસ્ટ સ્ક્રીન (ઉપર પ્રશ્ન અને વિકલ્પ, નીચે પેલેટ) -->
+    <section id="quizScreen" style="display: none;">
+        <div class="quiz-layout">
+            <!-- Top Section: Main Question Card -->
+            <div class="quiz-main-card">
+                <div>
+                    <div class="quiz-header">
+                        <div>
+                            <span id="qProgress" style="font-weight: 800; font-size: 16px; color: var(--heading-color);">પ્રશ્ન ૧ / ૧૦૦</span>
+                        </div>
+                        <div class="timer-badge">
+                            <i class="fa-regular fa-clock"></i> <span id="timerDisplay">૦૦:૦૦</span>
+                        </div>
+                    </div>
+                    <div class="question-box">
+                        <div id="unitBadge" class="unit-badge"></div>
+                        <div id="questionText" class="question-text"></div>
+                        <div id="optionsContainer"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions-bar">
+                    <button id="flagBtn" class="btn-flag" onclick="toggleFlagCurrentQuestion()">
+                        <i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)
+                    </button>
+                    <div class="nav-buttons-group">
+                        <button id="prevBtn" class="btn-prev" onclick="prevQuestion()"><i class="fa-solid fa-arrow-left"></i> પાછળ</button>
+                        <button id="nextBtn" class="btn-next" onclick="nextQuestion()">આગળ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Question Palette, Status Legend & Submit Button -->
+            <div class="palette-bottom-card">
+                <div class="palette-title">
+                    <span><i class="fa-solid fa-table-cells"></i> પ્રશ્ન પેલેટ (૧૦૦ પ્રશ્નોની સ્થિતિ)</span>
+                    <span id="answeredCountBadge" style="font-size: 12px; background: #10b981; color: white; padding: 4px 10px; border-radius: 12px;">0 / 100 પૂર્ણ</span>
+                </div>
+
+                <div class="legend-grid">
+                    <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div> જવાબ આપેલ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div> Flag / રિવ્યુ</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#94a3b8;"></div> બાકી પ્રશ્ન</div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div> ચાલુ પ્રશ્ન</div>
+                </div>
+
+                <div class="palette-grid" id="questionGridContainer"></div>
+
+                <div style="text-align: right; margin-top: 6px;">
+                    <button class="btn-gradient" onclick="confirmSubmitQuiz()" style="max-width: 280px; margin-left: auto; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); padding: 11px 18px; font-size: 14.5px;">
+                        <i class="fa-solid fa-circle-check"></i> કસોટી સબમિટ કરો
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ૩. પરિણામ સ્ક્રીન (Multi-Tab Review System) -->
+    <section id="resultScreen" style="display: none;">
+        <div class="result-summary-card">
+            <h2 style="color: var(--heading-color); font-size: 20px; font-weight: 900; margin-bottom: 6px;">
+                🎉 કસોટી મૂલ્યાંકન અહેવાલ
+            </h2>
+            <p style="margin: 3px 0; font-size: 14px;"><strong>પરીક્ષાર્થી:</strong> <span id="resName"></span> | <strong>સંપર્ક:</strong> <span id="resPhone"></span></p>
+            <p style="margin: 3px 0; font-size: 13px; color: var(--subheading-color);"><strong>વિષય:</strong> TET–1 ધોરણ 5 – પર્યાવરણ : આસપાસ (HOTS) | ૧૦૦ પ્રશ્નો</p>
+            
+            <div class="score-pill" id="resScore">0 / 100</div>
+            <div style="font-size: 17px; font-weight: 800; color: #10b981;" id="resPercent">0%</div>
+
+            <div class="res-stats-grid">
+                <div class="res-stat-box" style="background:#10b981;">
+                    <div>સાચા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resCorrectCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#ef4444;">
+                    <div>ખોટા ઉત્તર</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resWrongCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#f59e0b;">
+                    <div>રિવ્યુ/Flagged</div>
+                    <div style="font-size: 18px; font-weight: 900;" id="resFlagCount">0</div>
+                </div>
+                <div class="res-stat-box" style="background:#2563eb;">
+                    <div>લીધેલો સમય</div>
+                    <div style="font-size: 15px; font-weight: 900; margin-top: 2px;" id="resTime">00:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ૩ અલગ ટેબ (વિભાગો) -->
+        <div class="result-tabs-nav">
+            <button class="res-tab-btn active-tab" id="tabBtnWrong" onclick="switchResultTab('wrong')">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> ❌ માત્ર ખોટા પડેલા પ્રશ્નો
+            </button>
+            <button class="res-tab-btn" id="tabBtnAnswers" onclick="switchResultTab('answers')">
+                <i class="fa-solid fa-square-check" style="color: #10b981;"></i> 📋 ઉત્તરવહી & સમજૂતી
+            </button>
+            <button class="res-tab-btn" id="tabBtnBlank" onclick="switchResultTab('blank')">
+                <i class="fa-solid fa-file-lines" style="color: #2563eb;"></i> 📝 મૂળ પ્રશ્નપત્ર (પ્રેક્ટિસ)
+            </button>
+        </div>
+
+        <!-- ટેબ ૧: માત્ર ખોટા પડેલા પ્રશ્નો -->
+        <div id="tabContentWrong">
+            <div id="wrongQuestionsList"></div>
+        </div>
+
+        <!-- ટેબ ૨: આપેલા જવાબો સાથેનું પ્રશ્નપત્ર -->
+        <div id="tabContentAnswers" style="display: none;">
+            <div id="allAnswersList"></div>
+        </div>
+
+        <!-- ટેબ ૩: મૂળ પ્રશ્નપત્ર (Blank Question Paper) -->
+        <div id="tabContentBlank" style="display: none;">
+            <div id="blankQuestionsList"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-khogtnFjvjzRuv_ieBYJfx0TAxluM9OfoXlf72h9Yce14rdQu9_Xbmx3fnprk5Q30g/exec";
+
+// ૧૦૦ ઉચ્ચ કઠિનતામૂલ્ય (HOT) પ્રશ્નોનો ડેટાસેટ (કોર્સ-૧(અ): બોધ અને જ્ઞાન તથા રમતો)
+const questions = [
+  {
+    "q": "પ્રશ્ન 1. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: કીડીઓનું માર્ગશોધન. કીડીઓ અવરોધ પછી પણ ખોરાક સુધી પહોંચે છે.",
+    "options": [
+      "કીડીઓ પર્યાવરણના સંકેતોનો ઉપયોગ કરે છે",
+      "કીડીઓ માત્ર આંખથી માર્ગ શોધે છે",
+      "કીડીઓ હંમેશાં સીધી રેખામાં ચાલે છે",
+      "કીડીઓને ખોરાકની ગંધનો અનુભવ થતો નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: મજાની દુનિયાઓ",
+    "exp": "કીડીઓ માર્ગ અને ખોરાક શોધવામાં આસપાસના સંકેતોનો ઉપયોગ કરે છે. સતત અવલોકનથી તેમના વર્તનની સમજ મળે છે. (પ્રકરણ: મજાની દુનિયાઓ)"
+  },
+  {
+    "q": "પ્રશ્ન 2. કીડીઓનું માર્ગશોધન અંગેનું અવલોકન: કીડીઓ અવરોધ પછી પણ ખોરાક સુધી પહોંચે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "કીડીઓ પર્યાવરણના સંકેતોનો ઉપયોગ કરે છે",
+      "કીડીઓ માત્ર આંખથી માર્ગ શોધે છે",
+      "કીડીઓ હંમેશાં સીધી રેખામાં ચાલે છે",
+      "કીડીઓને ખોરાકની ગંધનો અનુભવ થતો નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: મજાની દુનિયાઓ",
+    "exp": "કીડીઓ માર્ગ અને ખોરાક શોધવામાં આસપાસના સંકેતોનો ઉપયોગ કરે છે. સતત અવલોકનથી તેમના વર્તનની સમજ મળે છે. (પ્રકરણ: મજાની દુનિયાઓ)"
+  },
+  {
+    "q": "પ્રશ્ન 3. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે કીડીઓનું માર્ગશોધન અંગે વિચારતાં—કીડીઓ અવરોધ પછી પણ ખોરાક સુધી પહોંચે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "કીડીઓ પર્યાવરણના સંકેતોનો ઉપયોગ કરે છે",
+      "કીડીઓ માત્ર આંખથી માર્ગ શોધે છે",
+      "કીડીઓ હંમેશાં સીધી રેખામાં ચાલે છે",
+      "કીડીઓને ખોરાકની ગંધનો અનુભવ થતો નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: મજાની દુનિયાઓ",
+    "exp": "કીડીઓ માર્ગ અને ખોરાક શોધવામાં આસપાસના સંકેતોનો ઉપયોગ કરે છે. સતત અવલોકનથી તેમના વર્તનની સમજ મળે છે. (પ્રકરણ: મજાની દુનિયાઓ)"
+  },
+  {
+    "q": "પ્રશ્ન 4. પાઠમાં સમજાવેલી કીડીઓનું માર્ગશોધનની સંકલ્પના મુજબ, કીડીઓ અવરોધ પછી પણ ખોરાક સુધી પહોંચે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "કીડીઓ પર્યાવરણના સંકેતોનો ઉપયોગ કરે છે",
+      "કીડીઓ માત્ર આંખથી માર્ગ શોધે છે",
+      "કીડીઓ હંમેશાં સીધી રેખામાં ચાલે છે",
+      "કીડીઓને ખોરાકની ગંધનો અનુભવ થતો નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: મજાની દુનિયાઓ",
+    "exp": "કીડીઓ માર્ગ અને ખોરાક શોધવામાં આસપાસના સંકેતોનો ઉપયોગ કરે છે. સતત અવલોકનથી તેમના વર્તનની સમજ મળે છે. (પ્રકરણ: મજાની દુનિયાઓ)"
+  },
+  {
+    "q": "પ્રશ્ન 5. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: જંતુઓમાં વિવિધતા. જંતુઓની પાંખો અને શરીરરચના એકસરખી નથી.",
+    "options": [
+      "જંતુઓમાં પાંખોની હાજરી અને સંખ્યા જુદી હોઈ શકે છે",
+      "દરેક જંતુને બે જોડી પાંખો હોય છે",
+      "પાંખો માત્ર પાણીમાં રહેતા જંતુઓમાં હોય છે",
+      "જંતુઓની ઓળખ માત્ર રંગથી થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: મજાની દુનિયાઓ",
+    "exp": "જીવજંતુઓમાં વિવિધતા હોય છે; ઓળખ માટે અનેક લક્ષણોનું અવલોકન કરવું જોઈએ. (પ્રકરણ: મજાની દુનિયાઓ)"
+  },
+  {
+    "q": "પ્રશ્ન 6. જંતુઓમાં વિવિધતા અંગેનું અવલોકન: જંતુઓની પાંખો અને શરીરરચના એકસરખી નથી. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "જંતુઓમાં પાંખોની હાજરી અને સંખ્યા જુદી હોઈ શકે છે",
+      "દરેક જંતુને બે જોડી પાંખો હોય છે",
+      "પાંખો માત્ર પાણીમાં રહેતા જંતુઓમાં હોય છે",
+      "જંતુઓની ઓળખ માત્ર રંગથી થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: મજાની દુનિયાઓ",
+    "exp": "જીવજંતુઓમાં વિવિધતા હોય છે; ઓળખ માટે અનેક લક્ષણોનું અવલોકન કરવું જોઈએ. (પ્રકરણ: મજાની દુનિયાઓ)"
+  },
+  {
+    "q": "પ્રશ્ન 7. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે જંતુઓમાં વિવિધતા અંગે વિચારતાં—જંતુઓની પાંખો અને શરીરરચના એકસરખી નથી. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "જંતુઓમાં પાંખોની હાજરી અને સંખ્યા જુદી હોઈ શકે છે",
+      "દરેક જંતુને બે જોડી પાંખો હોય છે",
+      "પાંખો માત્ર પાણીમાં રહેતા જંતુઓમાં હોય છે",
+      "જંતુઓની ઓળખ માત્ર રંગથી થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: મજાની દુનિયાઓ",
+    "exp": "જીવજંતુઓમાં વિવિધતા હોય છે; ઓળખ માટે અનેક લક્ષણોનું અવલોકન કરવું જોઈએ. (પ્રકરણ: મજાની દુનિયાઓ)"
+  },
+  {
+    "q": "પ્રશ્ન 8. પાઠમાં સમજાવેલી જંતુઓમાં વિવિધતાની સંકલ્પના મુજબ, જંતુઓની પાંખો અને શરીરરચના એકસરખી નથી. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "જંતુઓમાં પાંખોની હાજરી અને સંખ્યા જુદી હોઈ શકે છે",
+      "દરેક જંતુને બે જોડી પાંખો હોય છે",
+      "પાંખો માત્ર પાણીમાં રહેતા જંતુઓમાં હોય છે",
+      "જંતુઓની ઓળખ માત્ર રંગથી થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: મજાની દુનિયાઓ",
+    "exp": "જીવજંતુઓમાં વિવિધતા હોય છે; ઓળખ માટે અનેક લક્ષણોનું અવલોકન કરવું જોઈએ. (પ્રકરણ: મજાની દુનિયાઓ)"
+  },
+  {
+    "q": "પ્રશ્ન 9. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: સાપનું વર્તન. સાપ મદારીની હલતી બીન અને શરીરની ગતિને અનુસરે છે.",
+    "options": [
+      "સાપ હલનચલનને અનુસરે છે",
+      "સાપ માનવીની જેમ સંગીતના તાલે નાચે છે",
+      "સાપ ગીતના શબ્દો સમજે છે",
+      "સાપને કોઈ હિલચાલ દેખાતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સાપ અને મદારી",
+    "exp": "સાપ બહારના કાનથી માનવીની જેમ સાંભળતો નથી; તે મદારીની હલતી બીનને અનુસરે છે. (પ્રકરણ: સાપ અને મદારી)"
+  },
+  {
+    "q": "પ્રશ્ન 10. સાપનું વર્તન અંગેનું અવલોકન: સાપ મદારીની હલતી બીન અને શરીરની ગતિને અનુસરે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "સાપ હલનચલનને અનુસરે છે",
+      "સાપ માનવીની જેમ સંગીતના તાલે નાચે છે",
+      "સાપ ગીતના શબ્દો સમજે છે",
+      "સાપને કોઈ હિલચાલ દેખાતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સાપ અને મદારી",
+    "exp": "સાપ બહારના કાનથી માનવીની જેમ સાંભળતો નથી; તે મદારીની હલતી બીનને અનુસરે છે. (પ્રકરણ: સાપ અને મદારી)"
+  },
+  {
+    "q": "પ્રશ્ન 11. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે સાપનું વર્તન અંગે વિચારતાં—સાપ મદારીની હલતી બીન અને શરીરની ગતિને અનુસરે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "સાપ હલનચલનને અનુસરે છે",
+      "સાપ માનવીની જેમ સંગીતના તાલે નાચે છે",
+      "સાપ ગીતના શબ્દો સમજે છે",
+      "સાપને કોઈ હિલચાલ દેખાતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સાપ અને મદારી",
+    "exp": "સાપ બહારના કાનથી માનવીની જેમ સાંભળતો નથી; તે મદારીની હલતી બીનને અનુસરે છે. (પ્રકરણ: સાપ અને મદારી)"
+  },
+  {
+    "q": "પ્રશ્ન 12. પાઠમાં સમજાવેલી સાપનું વર્તનની સંકલ્પના મુજબ, સાપ મદારીની હલતી બીન અને શરીરની ગતિને અનુસરે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "સાપ હલનચલનને અનુસરે છે",
+      "સાપ માનવીની જેમ સંગીતના તાલે નાચે છે",
+      "સાપ ગીતના શબ્દો સમજે છે",
+      "સાપને કોઈ હિલચાલ દેખાતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સાપ અને મદારી",
+    "exp": "સાપ બહારના કાનથી માનવીની જેમ સાંભળતો નથી; તે મદારીની હલતી બીનને અનુસરે છે. (પ્રકરણ: સાપ અને મદારી)"
+  },
+  {
+    "q": "પ્રશ્ન 13. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: સાપનો આહાર અને સંરક્ષણ. સાપ દૂધ પર આધારિત નથી; તે નાના પ્રાણીઓનો શિકાર કરે છે.",
+    "options": [
+      "સાપને દૂધ આપવું જરૂરી નથી; તેનું કુદરતી ભોજન અન્ય પ્રાણીઓ છે",
+      "દૂધ સાપનો મુખ્ય ખોરાક છે",
+      "દૂધ સાપનું ઝેર દૂર કરે છે",
+      "દરેક સાપ દૂધ વિના જીવતો નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સાપ અને મદારી",
+    "exp": "સાપનું કુદરતી આહાર દૂધ નથી. તે ઉંદર, દેડકા અને અન્ય નાના પ્રાણીઓનો શિકાર કરે છે. (પ્રકરણ: સાપ અને મદારી)"
+  },
+  {
+    "q": "પ્રશ્ન 14. સાપનો આહાર અને સંરક્ષણ અંગેનું અવલોકન: સાપ દૂધ પર આધારિત નથી; તે નાના પ્રાણીઓનો શિકાર કરે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "સાપને દૂધ આપવું જરૂરી નથી; તેનું કુદરતી ભોજન અન્ય પ્રાણીઓ છે",
+      "દૂધ સાપનો મુખ્ય ખોરાક છે",
+      "દૂધ સાપનું ઝેર દૂર કરે છે",
+      "દરેક સાપ દૂધ વિના જીવતો નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સાપ અને મદારી",
+    "exp": "સાપનું કુદરતી આહાર દૂધ નથી. તે ઉંદર, દેડકા અને અન્ય નાના પ્રાણીઓનો શિકાર કરે છે. (પ્રકરણ: સાપ અને મદારી)"
+  },
+  {
+    "q": "પ્રશ્ન 15. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે સાપનો આહાર અને સંરક્ષણ અંગે વિચારતાં—સાપ દૂધ પર આધારિત નથી; તે નાના પ્રાણીઓનો શિકાર કરે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "સાપને દૂધ આપવું જરૂરી નથી; તેનું કુદરતી ભોજન અન્ય પ્રાણીઓ છે",
+      "દૂધ સાપનો મુખ્ય ખોરાક છે",
+      "દૂધ સાપનું ઝેર દૂર કરે છે",
+      "દરેક સાપ દૂધ વિના જીવતો નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સાપ અને મદારી",
+    "exp": "સાપનું કુદરતી આહાર દૂધ નથી. તે ઉંદર, દેડકા અને અન્ય નાના પ્રાણીઓનો શિકાર કરે છે. (પ્રકરણ: સાપ અને મદારી)"
+  },
+  {
+    "q": "પ્રશ્ન 16. પાઠમાં સમજાવેલી સાપનો આહાર અને સંરક્ષણની સંકલ્પના મુજબ, સાપ દૂધ પર આધારિત નથી; તે નાના પ્રાણીઓનો શિકાર કરે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "સાપને દૂધ આપવું જરૂરી નથી; તેનું કુદરતી ભોજન અન્ય પ્રાણીઓ છે",
+      "દૂધ સાપનો મુખ્ય ખોરાક છે",
+      "દૂધ સાપનું ઝેર દૂર કરે છે",
+      "દરેક સાપ દૂધ વિના જીવતો નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સાપ અને મદારી",
+    "exp": "સાપનું કુદરતી આહાર દૂધ નથી. તે ઉંદર, દેડકા અને અન્ય નાના પ્રાણીઓનો શિકાર કરે છે. (પ્રકરણ: સાપ અને મદારી)"
+  },
+  {
+    "q": "પ્રશ્ન 17. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: પાચનની શરૂઆત. મોઢામાં ખોરાક ચવાય છે અને લાળ સાથે ભળે છે.",
+    "options": [
+      "ચાવવાથી ખોરાક નાના ટુકડામાં થાય અને લાળ સાથે ભળે છે",
+      "ખોરાક સીધો લોહીમાં જાય છે",
+      "પાચન માત્ર પેટમાં શરૂ થાય છે",
+      "દાંત ખોરાકમાંથી પોષકતત્ત્વો ખેંચે છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વાદથી પાચન સુધી",
+    "exp": "મોઢામાં દાંત ખોરાકને નાના ટુકડામાં ફેરવે છે અને લાળ પાચનની શરૂઆતમાં મદદ કરે છે. (પ્રકરણ: સ્વાદથી પાચન સુધી)"
+  },
+  {
+    "q": "પ્રશ્ન 18. પાચનની શરૂઆત અંગેનું અવલોકન: મોઢામાં ખોરાક ચવાય છે અને લાળ સાથે ભળે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "ચાવવાથી ખોરાક નાના ટુકડામાં થાય અને લાળ સાથે ભળે છે",
+      "ખોરાક સીધો લોહીમાં જાય છે",
+      "પાચન માત્ર પેટમાં શરૂ થાય છે",
+      "દાંત ખોરાકમાંથી પોષકતત્ત્વો ખેંચે છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વાદથી પાચન સુધી",
+    "exp": "મોઢામાં દાંત ખોરાકને નાના ટુકડામાં ફેરવે છે અને લાળ પાચનની શરૂઆતમાં મદદ કરે છે. (પ્રકરણ: સ્વાદથી પાચન સુધી)"
+  },
+  {
+    "q": "પ્રશ્ન 19. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે પાચનની શરૂઆત અંગે વિચારતાં—મોઢામાં ખોરાક ચવાય છે અને લાળ સાથે ભળે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "ચાવવાથી ખોરાક નાના ટુકડામાં થાય અને લાળ સાથે ભળે છે",
+      "ખોરાક સીધો લોહીમાં જાય છે",
+      "પાચન માત્ર પેટમાં શરૂ થાય છે",
+      "દાંત ખોરાકમાંથી પોષકતત્ત્વો ખેંચે છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વાદથી પાચન સુધી",
+    "exp": "મોઢામાં દાંત ખોરાકને નાના ટુકડામાં ફેરવે છે અને લાળ પાચનની શરૂઆતમાં મદદ કરે છે. (પ્રકરણ: સ્વાદથી પાચન સુધી)"
+  },
+  {
+    "q": "પ્રશ્ન 20. પાઠમાં સમજાવેલી પાચનની શરૂઆતની સંકલ્પના મુજબ, મોઢામાં ખોરાક ચવાય છે અને લાળ સાથે ભળે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "ચાવવાથી ખોરાક નાના ટુકડામાં થાય અને લાળ સાથે ભળે છે",
+      "ખોરાક સીધો લોહીમાં જાય છે",
+      "પાચન માત્ર પેટમાં શરૂ થાય છે",
+      "દાંત ખોરાકમાંથી પોષકતત્ત્વો ખેંચે છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વાદથી પાચન સુધી",
+    "exp": "મોઢામાં દાંત ખોરાકને નાના ટુકડામાં ફેરવે છે અને લાળ પાચનની શરૂઆતમાં મદદ કરે છે. (પ્રકરણ: સ્વાદથી પાચન સુધી)"
+  },
+  {
+    "q": "પ્રશ્ન 21. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: સ્વાદ અને ગંધ. ખોરાકનો સંપૂર્ણ સ્વાદ અનુભવવામાં નાકની ગંધ પણ ભાગ લે છે.",
+    "options": [
+      "સ્વાદના અનુભવમાં ગંધનો પણ ફાળો છે",
+      "સ્વાદ અને ગંધ અસંબંધિત છે",
+      "ગંધ માત્ર ખોરાકનો રંગ ઓળખે છે",
+      "સ્વાદનો અનુભવ પેટમાં થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વાદથી પાચન સુધી",
+    "exp": "જીભની સ્વાદગ્રંથિઓ અને નાકની ગંધ ઓળખવાની ક્ષમતા સાથે મળીને ખોરાકનો અનુભવ બનાવે છે. (પ્રકરણ: સ્વાદથી પાચન સુધી)"
+  },
+  {
+    "q": "પ્રશ્ન 22. સ્વાદ અને ગંધ અંગેનું અવલોકન: ખોરાકનો સંપૂર્ણ સ્વાદ અનુભવવામાં નાકની ગંધ પણ ભાગ લે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "સ્વાદના અનુભવમાં ગંધનો પણ ફાળો છે",
+      "સ્વાદ અને ગંધ અસંબંધિત છે",
+      "ગંધ માત્ર ખોરાકનો રંગ ઓળખે છે",
+      "સ્વાદનો અનુભવ પેટમાં થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વાદથી પાચન સુધી",
+    "exp": "જીભની સ્વાદગ્રંથિઓ અને નાકની ગંધ ઓળખવાની ક્ષમતા સાથે મળીને ખોરાકનો અનુભવ બનાવે છે. (પ્રકરણ: સ્વાદથી પાચન સુધી)"
+  },
+  {
+    "q": "પ્રશ્ન 23. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે સ્વાદ અને ગંધ અંગે વિચારતાં—ખોરાકનો સંપૂર્ણ સ્વાદ અનુભવવામાં નાકની ગંધ પણ ભાગ લે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "સ્વાદના અનુભવમાં ગંધનો પણ ફાળો છે",
+      "સ્વાદ અને ગંધ અસંબંધિત છે",
+      "ગંધ માત્ર ખોરાકનો રંગ ઓળખે છે",
+      "સ્વાદનો અનુભવ પેટમાં થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વાદથી પાચન સુધી",
+    "exp": "જીભની સ્વાદગ્રંથિઓ અને નાકની ગંધ ઓળખવાની ક્ષમતા સાથે મળીને ખોરાકનો અનુભવ બનાવે છે. (પ્રકરણ: સ્વાદથી પાચન સુધી)"
+  },
+  {
+    "q": "પ્રશ્ન 24. પાઠમાં સમજાવેલી સ્વાદ અને ગંધની સંકલ્પના મુજબ, ખોરાકનો સંપૂર્ણ સ્વાદ અનુભવવામાં નાકની ગંધ પણ ભાગ લે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "સ્વાદના અનુભવમાં ગંધનો પણ ફાળો છે",
+      "સ્વાદ અને ગંધ અસંબંધિત છે",
+      "ગંધ માત્ર ખોરાકનો રંગ ઓળખે છે",
+      "સ્વાદનો અનુભવ પેટમાં થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વાદથી પાચન સુધી",
+    "exp": "જીભની સ્વાદગ્રંથિઓ અને નાકની ગંધ ઓળખવાની ક્ષમતા સાથે મળીને ખોરાકનો અનુભવ બનાવે છે. (પ્રકરણ: સ્વાદથી પાચન સુધી)"
+  },
+  {
+    "q": "પ્રશ્ન 25. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: ખોરાક સાચવવો. મીઠું, તેલ અને સૂકવણીથી બગાડ કરનારા સૂક્ષ્મજીવોની વૃદ્ધિ ઘટે છે.",
+    "options": [
+      "ભેજ અને સૂક્ષ્મજીવોની વૃદ્ધિ ઘટાડવી",
+      "ખોરાકમાં પાણી વધારવું",
+      "બધાં પોષકતત્ત્વો દૂર કરવાં",
+      "ખોરાકને તરત તાજા ફળમાં ફેરવવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: કેરીઓ બારમાસ!",
+    "exp": "મીઠું, તેલ અને સૂકવણી યોગ્ય રીતે વપરાય ત્યારે ખોરાક બગાડતા સૂક્ષ્મજીવોની વૃદ્ધિ મર્યાદિત થાય છે. (પ્રકરણ: કેરીઓ બારમાસ!)"
+  },
+  {
+    "q": "પ્રશ્ન 26. ખોરાક સાચવવો અંગેનું અવલોકન: મીઠું, તેલ અને સૂકવણીથી બગાડ કરનારા સૂક્ષ્મજીવોની વૃદ્ધિ ઘટે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "ભેજ અને સૂક્ષ્મજીવોની વૃદ્ધિ ઘટાડવી",
+      "ખોરાકમાં પાણી વધારવું",
+      "બધાં પોષકતત્ત્વો દૂર કરવાં",
+      "ખોરાકને તરત તાજા ફળમાં ફેરવવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: કેરીઓ બારમાસ!",
+    "exp": "મીઠું, તેલ અને સૂકવણી યોગ્ય રીતે વપરાય ત્યારે ખોરાક બગાડતા સૂક્ષ્મજીવોની વૃદ્ધિ મર્યાદિત થાય છે. (પ્રકરણ: કેરીઓ બારમાસ!)"
+  },
+  {
+    "q": "પ્રશ્ન 27. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે ખોરાક સાચવવો અંગે વિચારતાં—મીઠું, તેલ અને સૂકવણીથી બગાડ કરનારા સૂક્ષ્મજીવોની વૃદ્ધિ ઘટે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "ભેજ અને સૂક્ષ્મજીવોની વૃદ્ધિ ઘટાડવી",
+      "ખોરાકમાં પાણી વધારવું",
+      "બધાં પોષકતત્ત્વો દૂર કરવાં",
+      "ખોરાકને તરત તાજા ફળમાં ફેરવવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: કેરીઓ બારમાસ!",
+    "exp": "મીઠું, તેલ અને સૂકવણી યોગ્ય રીતે વપરાય ત્યારે ખોરાક બગાડતા સૂક્ષ્મજીવોની વૃદ્ધિ મર્યાદિત થાય છે. (પ્રકરણ: કેરીઓ બારમાસ!)"
+  },
+  {
+    "q": "પ્રશ્ન 28. પાઠમાં સમજાવેલી ખોરાક સાચવવોની સંકલ્પના મુજબ, મીઠું, તેલ અને સૂકવણીથી બગાડ કરનારા સૂક્ષ્મજીવોની વૃદ્ધિ ઘટે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "ભેજ અને સૂક્ષ્મજીવોની વૃદ્ધિ ઘટાડવી",
+      "ખોરાકમાં પાણી વધારવું",
+      "બધાં પોષકતત્ત્વો દૂર કરવાં",
+      "ખોરાકને તરત તાજા ફળમાં ફેરવવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: કેરીઓ બારમાસ!",
+    "exp": "મીઠું, તેલ અને સૂકવણી યોગ્ય રીતે વપરાય ત્યારે ખોરાક બગાડતા સૂક્ષ્મજીવોની વૃદ્ધિ મર્યાદિત થાય છે. (પ્રકરણ: કેરીઓ બારમાસ!)"
+  },
+  {
+    "q": "પ્રશ્ન 29. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: બીજનું અંકુરણ. અંકુરણ માટે ભેજ, હવા અને યોગ્ય તાપમાન જરૂરી છે.",
+    "options": [
+      "ભેજ સાથે હવા અને યોગ્ય તાપમાન જરૂરી છે",
+      "માત્ર પ્રકાશ જરૂરી છે",
+      "બીજને હવાની જરૂર નથી",
+      "માટી વિના બીજ ક્યારેય ઊગતું નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "અંકુરણ માટે ભેજ સાથે ઓક્સિજન અને યોગ્ય તાપમાન જરૂરી છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 30. બીજનું અંકુરણ અંગેનું અવલોકન: અંકુરણ માટે ભેજ, હવા અને યોગ્ય તાપમાન જરૂરી છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "ભેજ સાથે હવા અને યોગ્ય તાપમાન જરૂરી છે",
+      "માત્ર પ્રકાશ જરૂરી છે",
+      "બીજને હવાની જરૂર નથી",
+      "માટી વિના બીજ ક્યારેય ઊગતું નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "અંકુરણ માટે ભેજ સાથે ઓક્સિજન અને યોગ્ય તાપમાન જરૂરી છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 31. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે બીજનું અંકુરણ અંગે વિચારતાં—અંકુરણ માટે ભેજ, હવા અને યોગ્ય તાપમાન જરૂરી છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "ભેજ સાથે હવા અને યોગ્ય તાપમાન જરૂરી છે",
+      "માત્ર પ્રકાશ જરૂરી છે",
+      "બીજને હવાની જરૂર નથી",
+      "માટી વિના બીજ ક્યારેય ઊગતું નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "અંકુરણ માટે ભેજ સાથે ઓક્સિજન અને યોગ્ય તાપમાન જરૂરી છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 32. પાઠમાં સમજાવેલી બીજનું અંકુરણની સંકલ્પના મુજબ, અંકુરણ માટે ભેજ, હવા અને યોગ્ય તાપમાન જરૂરી છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "ભેજ સાથે હવા અને યોગ્ય તાપમાન જરૂરી છે",
+      "માત્ર પ્રકાશ જરૂરી છે",
+      "બીજને હવાની જરૂર નથી",
+      "માટી વિના બીજ ક્યારેય ઊગતું નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "અંકુરણ માટે ભેજ સાથે ઓક્સિજન અને યોગ્ય તાપમાન જરૂરી છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 33. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: બીજનું વિખેરણ. બીજ હવા, પાણી કે પ્રાણીઓ દ્વારા નવા વિસ્તારોમાં ફેલાય છે.",
+    "options": [
+      "નવા વિસ્તારોમાં પહોંચીને સ્પર્ધા ઘટાડવી",
+      "બધાં બીજ એક જગ્યાએ ભેગાં કરવાં",
+      "અંકુરણની જરૂર દૂર કરવી",
+      "માત્ર મોટા બીજ ફેલાવાં"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "બીજનું વિખેરણ છોડને નવા સ્થળે પહોંચાડે છે અને માતૃછોડ સાથેની સ્પર્ધા ઘટાડે છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 34. બીજનું વિખેરણ અંગેનું અવલોકન: બીજ હવા, પાણી કે પ્રાણીઓ દ્વારા નવા વિસ્તારોમાં ફેલાય છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "નવા વિસ્તારોમાં પહોંચીને સ્પર્ધા ઘટાડવી",
+      "બધાં બીજ એક જગ્યાએ ભેગાં કરવાં",
+      "અંકુરણની જરૂર દૂર કરવી",
+      "માત્ર મોટા બીજ ફેલાવાં"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "બીજનું વિખેરણ છોડને નવા સ્થળે પહોંચાડે છે અને માતૃછોડ સાથેની સ્પર્ધા ઘટાડે છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 35. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે બીજનું વિખેરણ અંગે વિચારતાં—બીજ હવા, પાણી કે પ્રાણીઓ દ્વારા નવા વિસ્તારોમાં ફેલાય છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "નવા વિસ્તારોમાં પહોંચીને સ્પર્ધા ઘટાડવી",
+      "બધાં બીજ એક જગ્યાએ ભેગાં કરવાં",
+      "અંકુરણની જરૂર દૂર કરવી",
+      "માત્ર મોટા બીજ ફેલાવાં"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "બીજનું વિખેરણ છોડને નવા સ્થળે પહોંચાડે છે અને માતૃછોડ સાથેની સ્પર્ધા ઘટાડે છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 36. પાઠમાં સમજાવેલી બીજનું વિખેરણની સંકલ્પના મુજબ, બીજ હવા, પાણી કે પ્રાણીઓ દ્વારા નવા વિસ્તારોમાં ફેલાય છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "નવા વિસ્તારોમાં પહોંચીને સ્પર્ધા ઘટાડવી",
+      "બધાં બીજ એક જગ્યાએ ભેગાં કરવાં",
+      "અંકુરણની જરૂર દૂર કરવી",
+      "માત્ર મોટા બીજ ફેલાવાં"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "બીજનું વિખેરણ છોડને નવા સ્થળે પહોંચાડે છે અને માતૃછોડ સાથેની સ્પર્ધા ઘટાડે છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 37. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: સ્થાનિક બીજ. સ્થાનિક બીજ જૈવવિવિધતા અને સ્થાનિક પરિસ્થિતિને અનુરૂપ જાતો જાળવે છે.",
+    "options": [
+      "જૈવવિવિધતા અને સ્થાનિક અનુકૂલન જાળવવું",
+      "સ્થાનિક બીજ હંમેશાં વધુ ઉત્પાદન આપે",
+      "બજારનાં બીજ ક્યારેય ઊગતાં નથી",
+      "બીજથી જમીનની જરૂર રહેતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "સ્થાનિક જાતો વિવિધતા જાળવે છે અને સ્થાનિક હવામાનને અનુરૂપ હોઈ શકે છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 38. સ્થાનિક બીજ અંગેનું અવલોકન: સ્થાનિક બીજ જૈવવિવિધતા અને સ્થાનિક પરિસ્થિતિને અનુરૂપ જાતો જાળવે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "જૈવવિવિધતા અને સ્થાનિક અનુકૂલન જાળવવું",
+      "સ્થાનિક બીજ હંમેશાં વધુ ઉત્પાદન આપે",
+      "બજારનાં બીજ ક્યારેય ઊગતાં નથી",
+      "બીજથી જમીનની જરૂર રહેતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "સ્થાનિક જાતો વિવિધતા જાળવે છે અને સ્થાનિક હવામાનને અનુરૂપ હોઈ શકે છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 39. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે સ્થાનિક બીજ અંગે વિચારતાં—સ્થાનિક બીજ જૈવવિવિધતા અને સ્થાનિક પરિસ્થિતિને અનુરૂપ જાતો જાળવે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "જૈવવિવિધતા અને સ્થાનિક અનુકૂલન જાળવવું",
+      "સ્થાનિક બીજ હંમેશાં વધુ ઉત્પાદન આપે",
+      "બજારનાં બીજ ક્યારેય ઊગતાં નથી",
+      "બીજથી જમીનની જરૂર રહેતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "સ્થાનિક જાતો વિવિધતા જાળવે છે અને સ્થાનિક હવામાનને અનુરૂપ હોઈ શકે છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 40. પાઠમાં સમજાવેલી સ્થાનિક બીજની સંકલ્પના મુજબ, સ્થાનિક બીજ જૈવવિવિધતા અને સ્થાનિક પરિસ્થિતિને અનુરૂપ જાતો જાળવે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "જૈવવિવિધતા અને સ્થાનિક અનુકૂલન જાળવવું",
+      "સ્થાનિક બીજ હંમેશાં વધુ ઉત્પાદન આપે",
+      "બજારનાં બીજ ક્યારેય ઊગતાં નથી",
+      "બીજથી જમીનની જરૂર રહેતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "સ્થાનિક જાતો વિવિધતા જાળવે છે અને સ્થાનિક હવામાનને અનુરૂપ હોઈ શકે છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  },
+  {
+    "q": "પ્રશ્ન 41. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: વરસાદી પાણીનો સંગ્રહ. વાવ, તળાવ અને ટાંકા પાણી સંગ્રહ તથા ભૂગર્ભજળ પુનર્ભરણમાં મદદ કરે છે.",
+    "options": [
+      "પાણી રોકી જમીનમાં ઉતારવું અને જરૂરિયાત માટે સંગ્રહવું",
+      "વરસાદનું પ્રમાણ તરત વધારવું",
+      "નદીનું પાણી ખારું કરવું",
+      "માત્ર સજાવટ કરવી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જળ એ જ જીવન",
+    "exp": "જળસંચયથી પાણીનો બગાડ ઘટે છે અને ભૂગર્ભજળનું પુનર્ભરણ થઈ શકે છે. (પ્રકરણ: જળ એ જ જીવન)"
+  },
+  {
+    "q": "પ્રશ્ન 42. વરસાદી પાણીનો સંગ્રહ અંગેનું અવલોકન: વાવ, તળાવ અને ટાંકા પાણી સંગ્રહ તથા ભૂગર્ભજળ પુનર્ભરણમાં મદદ કરે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "પાણી રોકી જમીનમાં ઉતારવું અને જરૂરિયાત માટે સંગ્રહવું",
+      "વરસાદનું પ્રમાણ તરત વધારવું",
+      "નદીનું પાણી ખારું કરવું",
+      "માત્ર સજાવટ કરવી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જળ એ જ જીવન",
+    "exp": "જળસંચયથી પાણીનો બગાડ ઘટે છે અને ભૂગર્ભજળનું પુનર્ભરણ થઈ શકે છે. (પ્રકરણ: જળ એ જ જીવન)"
+  },
+  {
+    "q": "પ્રશ્ન 43. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે વરસાદી પાણીનો સંગ્રહ અંગે વિચારતાં—વાવ, તળાવ અને ટાંકા પાણી સંગ્રહ તથા ભૂગર્ભજળ પુનર્ભરણમાં મદદ કરે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "પાણી રોકી જમીનમાં ઉતારવું અને જરૂરિયાત માટે સંગ્રહવું",
+      "વરસાદનું પ્રમાણ તરત વધારવું",
+      "નદીનું પાણી ખારું કરવું",
+      "માત્ર સજાવટ કરવી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જળ એ જ જીવન",
+    "exp": "જળસંચયથી પાણીનો બગાડ ઘટે છે અને ભૂગર્ભજળનું પુનર્ભરણ થઈ શકે છે. (પ્રકરણ: જળ એ જ જીવન)"
+  },
+  {
+    "q": "પ્રશ્ન 44. પાઠમાં સમજાવેલી વરસાદી પાણીનો સંગ્રહની સંકલ્પના મુજબ, વાવ, તળાવ અને ટાંકા પાણી સંગ્રહ તથા ભૂગર્ભજળ પુનર્ભરણમાં મદદ કરે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "પાણી રોકી જમીનમાં ઉતારવું અને જરૂરિયાત માટે સંગ્રહવું",
+      "વરસાદનું પ્રમાણ તરત વધારવું",
+      "નદીનું પાણી ખારું કરવું",
+      "માત્ર સજાવટ કરવી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જળ એ જ જીવન",
+    "exp": "જળસંચયથી પાણીનો બગાડ ઘટે છે અને ભૂગર્ભજળનું પુનર્ભરણ થઈ શકે છે. (પ્રકરણ: જળ એ જ જીવન)"
+  },
+  {
+    "q": "પ્રશ્ન 45. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: પાણીની સામૂહિક જવાબદારી. ઘર, ખેતી, ઉદ્યોગ અને જીવસૃષ્ટિ સૌને પાણી જોઈએ.",
+    "options": [
+      "પાણીની બચત અને સંગ્રહ સૌની જવાબદારી છે",
+      "પાણી માત્ર ખેડૂતોનો પ્રશ્ન છે",
+      "માત્ર સરકાર પાણી બચાવી શકે",
+      "પાણીનો ઘરગથ્થુ ઉપયોગ શક્ય નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જળ એ જ જીવન",
+    "exp": "પાણી સર્વજીવન માટે જરૂરી છે; સંગ્રહ અને કરકસર માટે સૌનો ફાળો જરૂરી છે. (પ્રકરણ: જળ એ જ જીવન)"
+  },
+  {
+    "q": "પ્રશ્ન 46. પાણીની સામૂહિક જવાબદારી અંગેનું અવલોકન: ઘર, ખેતી, ઉદ્યોગ અને જીવસૃષ્ટિ સૌને પાણી જોઈએ. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "પાણીની બચત અને સંગ્રહ સૌની જવાબદારી છે",
+      "પાણી માત્ર ખેડૂતોનો પ્રશ્ન છે",
+      "માત્ર સરકાર પાણી બચાવી શકે",
+      "પાણીનો ઘરગથ્થુ ઉપયોગ શક્ય નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જળ એ જ જીવન",
+    "exp": "પાણી સર્વજીવન માટે જરૂરી છે; સંગ્રહ અને કરકસર માટે સૌનો ફાળો જરૂરી છે. (પ્રકરણ: જળ એ જ જીવન)"
+  },
+  {
+    "q": "પ્રશ્ન 47. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે પાણીની સામૂહિક જવાબદારી અંગે વિચારતાં—ઘર, ખેતી, ઉદ્યોગ અને જીવસૃષ્ટિ સૌને પાણી જોઈએ. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "પાણીની બચત અને સંગ્રહ સૌની જવાબદારી છે",
+      "પાણી માત્ર ખેડૂતોનો પ્રશ્ન છે",
+      "માત્ર સરકાર પાણી બચાવી શકે",
+      "પાણીનો ઘરગથ્થુ ઉપયોગ શક્ય નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જળ એ જ જીવન",
+    "exp": "પાણી સર્વજીવન માટે જરૂરી છે; સંગ્રહ અને કરકસર માટે સૌનો ફાળો જરૂરી છે. (પ્રકરણ: જળ એ જ જીવન)"
+  },
+  {
+    "q": "પ્રશ્ન 48. પાઠમાં સમજાવેલી પાણીની સામૂહિક જવાબદારીની સંકલ્પના મુજબ, ઘર, ખેતી, ઉદ્યોગ અને જીવસૃષ્ટિ સૌને પાણી જોઈએ. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "પાણીની બચત અને સંગ્રહ સૌની જવાબદારી છે",
+      "પાણી માત્ર ખેડૂતોનો પ્રશ્ન છે",
+      "માત્ર સરકાર પાણી બચાવી શકે",
+      "પાણીનો ઘરગથ્થુ ઉપયોગ શક્ય નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જળ એ જ જીવન",
+    "exp": "પાણી સર્વજીવન માટે જરૂરી છે; સંગ્રહ અને કરકસર માટે સૌનો ફાળો જરૂરી છે. (પ્રકરણ: જળ એ જ જીવન)"
+  },
+  {
+    "q": "પ્રશ્ન 49. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: તરવું અને ડૂબવું. વસ્તુનો આકાર અને તે કેટલું પાણી ખસેડે છે તે તરવા-ડૂબવા પર અસર કરે છે.",
+    "options": [
+      "આકાર, ઘનતા અને ખસેડાયેલા પાણીનું પ્રમાણ મહત્વનું છે",
+      "માત્ર પદાર્થનું નામ મહત્વનું છે",
+      "માત્ર રંગ નક્કી કરે છે",
+      "માત્ર ગોળ વસ્તુઓ તરે છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: પાણી સંબંધિત પ્રયોગ",
+    "exp": "તરવું માત્ર પદાર્થના નામથી નક્કી થતું નથી; આકાર અને ઘનતા પણ અગત્યનાં છે. (પ્રકરણ: પાણી સંબંધિત પ્રયોગ)"
+  },
+  {
+    "q": "પ્રશ્ન 50. તરવું અને ડૂબવું અંગેનું અવલોકન: વસ્તુનો આકાર અને તે કેટલું પાણી ખસેડે છે તે તરવા-ડૂબવા પર અસર કરે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "આકાર, ઘનતા અને ખસેડાયેલા પાણીનું પ્રમાણ મહત્વનું છે",
+      "માત્ર પદાર્થનું નામ મહત્વનું છે",
+      "માત્ર રંગ નક્કી કરે છે",
+      "માત્ર ગોળ વસ્તુઓ તરે છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: પાણી સંબંધિત પ્રયોગ",
+    "exp": "તરવું માત્ર પદાર્થના નામથી નક્કી થતું નથી; આકાર અને ઘનતા પણ અગત્યનાં છે. (પ્રકરણ: પાણી સંબંધિત પ્રયોગ)"
+  },
+  {
+    "q": "પ્રશ્ન 51. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે તરવું અને ડૂબવું અંગે વિચારતાં—વસ્તુનો આકાર અને તે કેટલું પાણી ખસેડે છે તે તરવા-ડૂબવા પર અસર કરે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "આકાર, ઘનતા અને ખસેડાયેલા પાણીનું પ્રમાણ મહત્વનું છે",
+      "માત્ર પદાર્થનું નામ મહત્વનું છે",
+      "માત્ર રંગ નક્કી કરે છે",
+      "માત્ર ગોળ વસ્તુઓ તરે છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: પાણી સંબંધિત પ્રયોગ",
+    "exp": "તરવું માત્ર પદાર્થના નામથી નક્કી થતું નથી; આકાર અને ઘનતા પણ અગત્યનાં છે. (પ્રકરણ: પાણી સંબંધિત પ્રયોગ)"
+  },
+  {
+    "q": "પ્રશ્ન 52. પાઠમાં સમજાવેલી તરવું અને ડૂબવુંની સંકલ્પના મુજબ, વસ્તુનો આકાર અને તે કેટલું પાણી ખસેડે છે તે તરવા-ડૂબવા પર અસર કરે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "આકાર, ઘનતા અને ખસેડાયેલા પાણીનું પ્રમાણ મહત્વનું છે",
+      "માત્ર પદાર્થનું નામ મહત્વનું છે",
+      "માત્ર રંગ નક્કી કરે છે",
+      "માત્ર ગોળ વસ્તુઓ તરે છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: પાણી સંબંધિત પ્રયોગ",
+    "exp": "તરવું માત્ર પદાર્થના નામથી નક્કી થતું નથી; આકાર અને ઘનતા પણ અગત્યનાં છે. (પ્રકરણ: પાણી સંબંધિત પ્રયોગ)"
+  },
+  {
+    "q": "પ્રશ્ન 53. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: વૈજ્ઞાનિક પ્રયોગ. અનુમાન, નિયંત્રિત પરીક્ષણ અને અવલોકનથી પુરાવા આધારિત નિષ્કર્ષ મળે છે.",
+    "options": [
+      "અનુમાન અને પરિણામની તુલના કરીને નિષ્કર્ષ સુધારવો",
+      "અનુમાનને સાચું સાબિત કરવા પરિણામ બદલવું",
+      "પ્રયોગની જરૂર દૂર કરવી",
+      "બીજાનું પરિણામ નકલ કરવું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: પાણી સંબંધિત પ્રયોગ",
+    "exp": "વૈજ્ઞાનિક વલણમાં અનુમાન, પ્રયોગ, નોંધ અને પુરાવા પ્રમાણે નિષ્કર્ષ સુધારવો સામેલ છે. (પ્રકરણ: પાણી સંબંધિત પ્રયોગ)"
+  },
+  {
+    "q": "પ્રશ્ન 54. વૈજ્ઞાનિક પ્રયોગ અંગેનું અવલોકન: અનુમાન, નિયંત્રિત પરીક્ષણ અને અવલોકનથી પુરાવા આધારિત નિષ્કર્ષ મળે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "અનુમાન અને પરિણામની તુલના કરીને નિષ્કર્ષ સુધારવો",
+      "અનુમાનને સાચું સાબિત કરવા પરિણામ બદલવું",
+      "પ્રયોગની જરૂર દૂર કરવી",
+      "બીજાનું પરિણામ નકલ કરવું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: પાણી સંબંધિત પ્રયોગ",
+    "exp": "વૈજ્ઞાનિક વલણમાં અનુમાન, પ્રયોગ, નોંધ અને પુરાવા પ્રમાણે નિષ્કર્ષ સુધારવો સામેલ છે. (પ્રકરણ: પાણી સંબંધિત પ્રયોગ)"
+  },
+  {
+    "q": "પ્રશ્ન 55. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે વૈજ્ઞાનિક પ્રયોગ અંગે વિચારતાં—અનુમાન, નિયંત્રિત પરીક્ષણ અને અવલોકનથી પુરાવા આધારિત નિષ્કર્ષ મળે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "અનુમાન અને પરિણામની તુલના કરીને નિષ્કર્ષ સુધારવો",
+      "અનુમાનને સાચું સાબિત કરવા પરિણામ બદલવું",
+      "પ્રયોગની જરૂર દૂર કરવી",
+      "બીજાનું પરિણામ નકલ કરવું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: પાણી સંબંધિત પ્રયોગ",
+    "exp": "વૈજ્ઞાનિક વલણમાં અનુમાન, પ્રયોગ, નોંધ અને પુરાવા પ્રમાણે નિષ્કર્ષ સુધારવો સામેલ છે. (પ્રકરણ: પાણી સંબંધિત પ્રયોગ)"
+  },
+  {
+    "q": "પ્રશ્ન 56. પાઠમાં સમજાવેલી વૈજ્ઞાનિક પ્રયોગની સંકલ્પના મુજબ, અનુમાન, નિયંત્રિત પરીક્ષણ અને અવલોકનથી પુરાવા આધારિત નિષ્કર્ષ મળે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "અનુમાન અને પરિણામની તુલના કરીને નિષ્કર્ષ સુધારવો",
+      "અનુમાનને સાચું સાબિત કરવા પરિણામ બદલવું",
+      "પ્રયોગની જરૂર દૂર કરવી",
+      "બીજાનું પરિણામ નકલ કરવું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: પાણી સંબંધિત પ્રયોગ",
+    "exp": "વૈજ્ઞાનિક વલણમાં અનુમાન, પ્રયોગ, નોંધ અને પુરાવા પ્રમાણે નિષ્કર્ષ સુધારવો સામેલ છે. (પ્રકરણ: પાણી સંબંધિત પ્રયોગ)"
+  },
+  {
+    "q": "પ્રશ્ન 57. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: સ્થાપત્ય અને હવામાન. ઘરની દીવાલો, બારીઓ અને સામગ્રી સ્થાનિક હવામાનને અનુરૂપ હોય છે.",
+    "options": [
+      "હવા, પ્રકાશ અને તાપમાનને ધ્યાનમાં રાખીને રચના થાય છે",
+      "ઘરની રચનાનો હવામાન સાથે સંબંધ નથી",
+      "બારીઓ માત્ર સજાવટ છે",
+      "જૂની ઇમારતોમાં હવા આવતી ન હતી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: દીવાલો ઊભી વાત કરે છે",
+    "exp": "ઇમારતની રચના સ્થાનિક હવામાન, સામગ્રી અને હવા-પ્રકાશની જરૂરિયાતથી પ્રભાવિત થાય છે. (પ્રકરણ: દીવાલો ઊભી વાત કરે છે)"
+  },
+  {
+    "q": "પ્રશ્ન 58. સ્થાપત્ય અને હવામાન અંગેનું અવલોકન: ઘરની દીવાલો, બારીઓ અને સામગ્રી સ્થાનિક હવામાનને અનુરૂપ હોય છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "હવા, પ્રકાશ અને તાપમાનને ધ્યાનમાં રાખીને રચના થાય છે",
+      "ઘરની રચનાનો હવામાન સાથે સંબંધ નથી",
+      "બારીઓ માત્ર સજાવટ છે",
+      "જૂની ઇમારતોમાં હવા આવતી ન હતી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: દીવાલો ઊભી વાત કરે છે",
+    "exp": "ઇમારતની રચના સ્થાનિક હવામાન, સામગ્રી અને હવા-પ્રકાશની જરૂરિયાતથી પ્રભાવિત થાય છે. (પ્રકરણ: દીવાલો ઊભી વાત કરે છે)"
+  },
+  {
+    "q": "પ્રશ્ન 59. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે સ્થાપત્ય અને હવામાન અંગે વિચારતાં—ઘરની દીવાલો, બારીઓ અને સામગ્રી સ્થાનિક હવામાનને અનુરૂપ હોય છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "હવા, પ્રકાશ અને તાપમાનને ધ્યાનમાં રાખીને રચના થાય છે",
+      "ઘરની રચનાનો હવામાન સાથે સંબંધ નથી",
+      "બારીઓ માત્ર સજાવટ છે",
+      "જૂની ઇમારતોમાં હવા આવતી ન હતી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: દીવાલો ઊભી વાત કરે છે",
+    "exp": "ઇમારતની રચના સ્થાનિક હવામાન, સામગ્રી અને હવા-પ્રકાશની જરૂરિયાતથી પ્રભાવિત થાય છે. (પ્રકરણ: દીવાલો ઊભી વાત કરે છે)"
+  },
+  {
+    "q": "પ્રશ્ન 60. પાઠમાં સમજાવેલી સ્થાપત્ય અને હવામાનની સંકલ્પના મુજબ, ઘરની દીવાલો, બારીઓ અને સામગ્રી સ્થાનિક હવામાનને અનુરૂપ હોય છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "હવા, પ્રકાશ અને તાપમાનને ધ્યાનમાં રાખીને રચના થાય છે",
+      "ઘરની રચનાનો હવામાન સાથે સંબંધ નથી",
+      "બારીઓ માત્ર સજાવટ છે",
+      "જૂની ઇમારતોમાં હવા આવતી ન હતી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: દીવાલો ઊભી વાત કરે છે",
+    "exp": "ઇમારતની રચના સ્થાનિક હવામાન, સામગ્રી અને હવા-પ્રકાશની જરૂરિયાતથી પ્રભાવિત થાય છે. (પ્રકરણ: દીવાલો ઊભી વાત કરે છે)"
+  },
+  {
+    "q": "પ્રશ્ન 61. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: અવકાશમાં પાણી. સૂક્ષ્મ ગુરુત્વાકર્ષણ અને સપાટી તાણને કારણે પાણીના ટીપાં ગોળાકાર બને છે.",
+    "options": [
+      "સપાટી તાણથી ટીપાં ગોળ બને છે અને નીચે પડતાં નથી",
+      "પાણીનું દળ શૂન્ય થઈ જાય છે",
+      "પાણી તરત વાયુ બને છે",
+      "પાણીમાં મીઠું હોય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સુનીતા અવકાશમાં",
+    "exp": "અવકાશયાનમાં પૃથ્વી જેવી ગુરુત્વાકર્ષણની અસર ન હોવાથી પાણી નીચે વહેતું નથી; સપાટી તાણ ટીપાંને ગોળ બનાવે છે. (પ્રકરણ: સુનીતા અવકાશમાં)"
+  },
+  {
+    "q": "પ્રશ્ન 62. અવકાશમાં પાણી અંગેનું અવલોકન: સૂક્ષ્મ ગુરુત્વાકર્ષણ અને સપાટી તાણને કારણે પાણીના ટીપાં ગોળાકાર બને છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "સપાટી તાણથી ટીપાં ગોળ બને છે અને નીચે પડતાં નથી",
+      "પાણીનું દળ શૂન્ય થઈ જાય છે",
+      "પાણી તરત વાયુ બને છે",
+      "પાણીમાં મીઠું હોય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સુનીતા અવકાશમાં",
+    "exp": "અવકાશયાનમાં પૃથ્વી જેવી ગુરુત્વાકર્ષણની અસર ન હોવાથી પાણી નીચે વહેતું નથી; સપાટી તાણ ટીપાંને ગોળ બનાવે છે. (પ્રકરણ: સુનીતા અવકાશમાં)"
+  },
+  {
+    "q": "પ્રશ્ન 63. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે અવકાશમાં પાણી અંગે વિચારતાં—સૂક્ષ્મ ગુરુત્વાકર્ષણ અને સપાટી તાણને કારણે પાણીના ટીપાં ગોળાકાર બને છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "સપાટી તાણથી ટીપાં ગોળ બને છે અને નીચે પડતાં નથી",
+      "પાણીનું દળ શૂન્ય થઈ જાય છે",
+      "પાણી તરત વાયુ બને છે",
+      "પાણીમાં મીઠું હોય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સુનીતા અવકાશમાં",
+    "exp": "અવકાશયાનમાં પૃથ્વી જેવી ગુરુત્વાકર્ષણની અસર ન હોવાથી પાણી નીચે વહેતું નથી; સપાટી તાણ ટીપાંને ગોળ બનાવે છે. (પ્રકરણ: સુનીતા અવકાશમાં)"
+  },
+  {
+    "q": "પ્રશ્ન 64. પાઠમાં સમજાવેલી અવકાશમાં પાણીની સંકલ્પના મુજબ, સૂક્ષ્મ ગુરુત્વાકર્ષણ અને સપાટી તાણને કારણે પાણીના ટીપાં ગોળાકાર બને છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "સપાટી તાણથી ટીપાં ગોળ બને છે અને નીચે પડતાં નથી",
+      "પાણીનું દળ શૂન્ય થઈ જાય છે",
+      "પાણી તરત વાયુ બને છે",
+      "પાણીમાં મીઠું હોય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સુનીતા અવકાશમાં",
+    "exp": "અવકાશયાનમાં પૃથ્વી જેવી ગુરુત્વાકર્ષણની અસર ન હોવાથી પાણી નીચે વહેતું નથી; સપાટી તાણ ટીપાંને ગોળ બનાવે છે. (પ્રકરણ: સુનીતા અવકાશમાં)"
+  },
+  {
+    "q": "પ્રશ્ન 65. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: અવકાશમાં જીવન. અવકાશયાત્રીઓ સૂતી વખતે શરીરને બાંધે છે અને ખોરાક પેકેટમાં લે છે.",
+    "options": [
+      "સૂક્ષ્મ ગુરુત્વાકર્ષણમાં શરીર અને ખોરાક તરતા રહે છે",
+      "અવકાશમાં ઊંઘ આવતી નથી",
+      "અવકાશયાનમાં હવા જ નથી",
+      "શરીરનું વજન વધી જાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સુનીતા અવકાશમાં",
+    "exp": "વસ્તુઓ તરતી રહે છે; સ્થિર રહેવા શરીર બાંધવું અને ખોરાક પેકેટમાં લેવો સલામતી માટે જરૂરી છે. (પ્રકરણ: સુનીતા અવકાશમાં)"
+  },
+  {
+    "q": "પ્રશ્ન 66. અવકાશમાં જીવન અંગેનું અવલોકન: અવકાશયાત્રીઓ સૂતી વખતે શરીરને બાંધે છે અને ખોરાક પેકેટમાં લે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "સૂક્ષ્મ ગુરુત્વાકર્ષણમાં શરીર અને ખોરાક તરતા રહે છે",
+      "અવકાશમાં ઊંઘ આવતી નથી",
+      "અવકાશયાનમાં હવા જ નથી",
+      "શરીરનું વજન વધી જાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સુનીતા અવકાશમાં",
+    "exp": "વસ્તુઓ તરતી રહે છે; સ્થિર રહેવા શરીર બાંધવું અને ખોરાક પેકેટમાં લેવો સલામતી માટે જરૂરી છે. (પ્રકરણ: સુનીતા અવકાશમાં)"
+  },
+  {
+    "q": "પ્રશ્ન 67. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે અવકાશમાં જીવન અંગે વિચારતાં—અવકાશયાત્રીઓ સૂતી વખતે શરીરને બાંધે છે અને ખોરાક પેકેટમાં લે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "સૂક્ષ્મ ગુરુત્વાકર્ષણમાં શરીર અને ખોરાક તરતા રહે છે",
+      "અવકાશમાં ઊંઘ આવતી નથી",
+      "અવકાશયાનમાં હવા જ નથી",
+      "શરીરનું વજન વધી જાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સુનીતા અવકાશમાં",
+    "exp": "વસ્તુઓ તરતી રહે છે; સ્થિર રહેવા શરીર બાંધવું અને ખોરાક પેકેટમાં લેવો સલામતી માટે જરૂરી છે. (પ્રકરણ: સુનીતા અવકાશમાં)"
+  },
+  {
+    "q": "પ્રશ્ન 68. પાઠમાં સમજાવેલી અવકાશમાં જીવનની સંકલ્પના મુજબ, અવકાશયાત્રીઓ સૂતી વખતે શરીરને બાંધે છે અને ખોરાક પેકેટમાં લે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "સૂક્ષ્મ ગુરુત્વાકર્ષણમાં શરીર અને ખોરાક તરતા રહે છે",
+      "અવકાશમાં ઊંઘ આવતી નથી",
+      "અવકાશયાનમાં હવા જ નથી",
+      "શરીરનું વજન વધી જાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સુનીતા અવકાશમાં",
+    "exp": "વસ્તુઓ તરતી રહે છે; સ્થિર રહેવા શરીર બાંધવું અને ખોરાક પેકેટમાં લેવો સલામતી માટે જરૂરી છે. (પ્રકરણ: સુનીતા અવકાશમાં)"
+  },
+  {
+    "q": "પ્રશ્ન 69. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: મર્યાદિત ઇંધણ. પેટ્રોલિયમ બનવામાં અત્યંત લાંબો સમય લાગે છે; તેથી તે મર્યાદિત સંસાધન છે.",
+    "options": [
+      "વૈકલ્પિક ઊર્જા અને બચત અપનાવવી",
+      "વધુ પેટ્રોલિયમ વાપરવું",
+      "તે રોજ પુનઃઉત્પન્ન થાય છે",
+      "ઊર્જા બચત બિનજરૂરી છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જો આ બધું જાય તો?",
+    "exp": "પેટ્રોલિયમ બનવામાં લાખો વર્ષ લાગી શકે છે; તેથી જાહેર પરિવહન અને વૈકલ્પિક ઊર્જા જરૂરી છે. (પ્રકરણ: જો આ બધું જાય તો?)"
+  },
+  {
+    "q": "પ્રશ્ન 70. મર્યાદિત ઇંધણ અંગેનું અવલોકન: પેટ્રોલિયમ બનવામાં અત્યંત લાંબો સમય લાગે છે; તેથી તે મર્યાદિત સંસાધન છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "વૈકલ્પિક ઊર્જા અને બચત અપનાવવી",
+      "વધુ પેટ્રોલિયમ વાપરવું",
+      "તે રોજ પુનઃઉત્પન્ન થાય છે",
+      "ઊર્જા બચત બિનજરૂરી છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જો આ બધું જાય તો?",
+    "exp": "પેટ્રોલિયમ બનવામાં લાખો વર્ષ લાગી શકે છે; તેથી જાહેર પરિવહન અને વૈકલ્પિક ઊર્જા જરૂરી છે. (પ્રકરણ: જો આ બધું જાય તો?)"
+  },
+  {
+    "q": "પ્રશ્ન 71. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે મર્યાદિત ઇંધણ અંગે વિચારતાં—પેટ્રોલિયમ બનવામાં અત્યંત લાંબો સમય લાગે છે; તેથી તે મર્યાદિત સંસાધન છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "વૈકલ્પિક ઊર્જા અને બચત અપનાવવી",
+      "વધુ પેટ્રોલિયમ વાપરવું",
+      "તે રોજ પુનઃઉત્પન્ન થાય છે",
+      "ઊર્જા બચત બિનજરૂરી છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જો આ બધું જાય તો?",
+    "exp": "પેટ્રોલિયમ બનવામાં લાખો વર્ષ લાગી શકે છે; તેથી જાહેર પરિવહન અને વૈકલ્પિક ઊર્જા જરૂરી છે. (પ્રકરણ: જો આ બધું જાય તો?)"
+  },
+  {
+    "q": "પ્રશ્ન 72. પાઠમાં સમજાવેલી મર્યાદિત ઇંધણની સંકલ્પના મુજબ, પેટ્રોલિયમ બનવામાં અત્યંત લાંબો સમય લાગે છે; તેથી તે મર્યાદિત સંસાધન છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "વૈકલ્પિક ઊર્જા અને બચત અપનાવવી",
+      "વધુ પેટ્રોલિયમ વાપરવું",
+      "તે રોજ પુનઃઉત્પન્ન થાય છે",
+      "ઊર્જા બચત બિનજરૂરી છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જો આ બધું જાય તો?",
+    "exp": "પેટ્રોલિયમ બનવામાં લાખો વર્ષ લાગી શકે છે; તેથી જાહેર પરિવહન અને વૈકલ્પિક ઊર્જા જરૂરી છે. (પ્રકરણ: જો આ બધું જાય તો?)"
+  },
+  {
+    "q": "પ્રશ્ન 73. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: સ્વચ્છતા અને સમાનતા. કચરાનું વિભાજન અને સ્વચ્છતામાં સૌની ભાગીદારી જરૂરી છે.",
+    "options": [
+      "સ્વચ્છતા સૌની સામૂહિક જવાબદારી છે",
+      "સફાઈ માત્ર ચોક્કસ વર્ગનું કામ છે",
+      "કચરો ખુલ્લામાં સળગાવવો",
+      "કચરો નદીમાં નાખવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વચ્છતાની આસપાસ કામ",
+    "exp": "પાઠ શ્રમનું ગૌરવ, સમાનતા અને સ્વચ્છતામાં સૌની ભાગીદારી પર ભાર મૂકે છે. (પ્રકરણ: સ્વચ્છતાની આસપાસ કામ)"
+  },
+  {
+    "q": "પ્રશ્ન 74. સ્વચ્છતા અને સમાનતા અંગેનું અવલોકન: કચરાનું વિભાજન અને સ્વચ્છતામાં સૌની ભાગીદારી જરૂરી છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "સ્વચ્છતા સૌની સામૂહિક જવાબદારી છે",
+      "સફાઈ માત્ર ચોક્કસ વર્ગનું કામ છે",
+      "કચરો ખુલ્લામાં સળગાવવો",
+      "કચરો નદીમાં નાખવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વચ્છતાની આસપાસ કામ",
+    "exp": "પાઠ શ્રમનું ગૌરવ, સમાનતા અને સ્વચ્છતામાં સૌની ભાગીદારી પર ભાર મૂકે છે. (પ્રકરણ: સ્વચ્છતાની આસપાસ કામ)"
+  },
+  {
+    "q": "પ્રશ્ન 75. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે સ્વચ્છતા અને સમાનતા અંગે વિચારતાં—કચરાનું વિભાજન અને સ્વચ્છતામાં સૌની ભાગીદારી જરૂરી છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "સ્વચ્છતા સૌની સામૂહિક જવાબદારી છે",
+      "સફાઈ માત્ર ચોક્કસ વર્ગનું કામ છે",
+      "કચરો ખુલ્લામાં સળગાવવો",
+      "કચરો નદીમાં નાખવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વચ્છતાની આસપાસ કામ",
+    "exp": "પાઠ શ્રમનું ગૌરવ, સમાનતા અને સ્વચ્છતામાં સૌની ભાગીદારી પર ભાર મૂકે છે. (પ્રકરણ: સ્વચ્છતાની આસપાસ કામ)"
+  },
+  {
+    "q": "પ્રશ્ન 76. પાઠમાં સમજાવેલી સ્વચ્છતા અને સમાનતાની સંકલ્પના મુજબ, કચરાનું વિભાજન અને સ્વચ્છતામાં સૌની ભાગીદારી જરૂરી છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "સ્વચ્છતા સૌની સામૂહિક જવાબદારી છે",
+      "સફાઈ માત્ર ચોક્કસ વર્ગનું કામ છે",
+      "કચરો ખુલ્લામાં સળગાવવો",
+      "કચરો નદીમાં નાખવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વચ્છતાની આસપાસ કામ",
+    "exp": "પાઠ શ્રમનું ગૌરવ, સમાનતા અને સ્વચ્છતામાં સૌની ભાગીદારી પર ભાર મૂકે છે. (પ્રકરણ: સ્વચ્છતાની આસપાસ કામ)"
+  },
+  {
+    "q": "પ્રશ્ન 77. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: સ્થળાંતર અને શિક્ષણ. રોજગાર માટે સ્થળાંતરથી બાળકોના શિક્ષણ અને પરિવારની સંભાળ પર અસર પડી શકે છે.",
+    "options": [
+      "સતત શિક્ષણ અને લવચીક સહાય ગોઠવવી",
+      "બાળકોનું શિક્ષણ બંધ કરવું",
+      "બાળકોને કામે મોકલવા",
+      "માત્ર પરીક્ષા સમયે બોલાવવા"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: હવે અમે ક્યાં જઈએ?",
+    "exp": "સ્થળાંતરિત બાળકોને શાળામાં જોડાયેલા રાખવા સતત અને સમાવેશી શૈક્ષણિક સહાય જરૂરી છે. (પ્રકરણ: હવે અમે ક્યાં જઈએ?)"
+  },
+  {
+    "q": "પ્રશ્ન 78. સ્થળાંતર અને શિક્ષણ અંગેનું અવલોકન: રોજગાર માટે સ્થળાંતરથી બાળકોના શિક્ષણ અને પરિવારની સંભાળ પર અસર પડી શકે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "સતત શિક્ષણ અને લવચીક સહાય ગોઠવવી",
+      "બાળકોનું શિક્ષણ બંધ કરવું",
+      "બાળકોને કામે મોકલવા",
+      "માત્ર પરીક્ષા સમયે બોલાવવા"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: હવે અમે ક્યાં જઈએ?",
+    "exp": "સ્થળાંતરિત બાળકોને શાળામાં જોડાયેલા રાખવા સતત અને સમાવેશી શૈક્ષણિક સહાય જરૂરી છે. (પ્રકરણ: હવે અમે ક્યાં જઈએ?)"
+  },
+  {
+    "q": "પ્રશ્ન 79. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે સ્થળાંતર અને શિક્ષણ અંગે વિચારતાં—રોજગાર માટે સ્થળાંતરથી બાળકોના શિક્ષણ અને પરિવારની સંભાળ પર અસર પડી શકે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "સતત શિક્ષણ અને લવચીક સહાય ગોઠવવી",
+      "બાળકોનું શિક્ષણ બંધ કરવું",
+      "બાળકોને કામે મોકલવા",
+      "માત્ર પરીક્ષા સમયે બોલાવવા"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: હવે અમે ક્યાં જઈએ?",
+    "exp": "સ્થળાંતરિત બાળકોને શાળામાં જોડાયેલા રાખવા સતત અને સમાવેશી શૈક્ષણિક સહાય જરૂરી છે. (પ્રકરણ: હવે અમે ક્યાં જઈએ?)"
+  },
+  {
+    "q": "પ્રશ્ન 80. પાઠમાં સમજાવેલી સ્થળાંતર અને શિક્ષણની સંકલ્પના મુજબ, રોજગાર માટે સ્થળાંતરથી બાળકોના શિક્ષણ અને પરિવારની સંભાળ પર અસર પડી શકે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "સતત શિક્ષણ અને લવચીક સહાય ગોઠવવી",
+      "બાળકોનું શિક્ષણ બંધ કરવું",
+      "બાળકોને કામે મોકલવા",
+      "માત્ર પરીક્ષા સમયે બોલાવવા"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: હવે અમે ક્યાં જઈએ?",
+    "exp": "સ્થળાંતરિત બાળકોને શાળામાં જોડાયેલા રાખવા સતત અને સમાવેશી શૈક્ષણિક સહાય જરૂરી છે. (પ્રકરણ: હવે અમે ક્યાં જઈએ?)"
+  },
+  {
+    "q": "પ્રશ્ન 81. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: જંગલ અને સમુદાય. જંગલ ખોરાક, ઔષધિ, રોજગાર અને સ્થાનિક જ્ઞાનનો આધાર છે.",
+    "options": [
+      "સ્થાનિક સમુદાય સાથે સંયુક્ત સંરક્ષણ કરવું",
+      "લોકોને દૂર રાખવા",
+      "માત્ર વૃક્ષોની સંખ્યા ગણવી",
+      "વનવિનાશથી કોઈ અસર થતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જંગલો કેમ?",
+    "exp": "જંગલ સંરક્ષણમાં જીવસૃષ્ટિ, સ્થાનિક લોકો અને પર્યાવરણીય પ્રક્રિયાઓનો સમાવેશ જરૂરી છે. (પ્રકરણ: જંગલો કેમ?)"
+  },
+  {
+    "q": "પ્રશ્ન 82. જંગલ અને સમુદાય અંગેનું અવલોકન: જંગલ ખોરાક, ઔષધિ, રોજગાર અને સ્થાનિક જ્ઞાનનો આધાર છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "સ્થાનિક સમુદાય સાથે સંયુક્ત સંરક્ષણ કરવું",
+      "લોકોને દૂર રાખવા",
+      "માત્ર વૃક્ષોની સંખ્યા ગણવી",
+      "વનવિનાશથી કોઈ અસર થતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જંગલો કેમ?",
+    "exp": "જંગલ સંરક્ષણમાં જીવસૃષ્ટિ, સ્થાનિક લોકો અને પર્યાવરણીય પ્રક્રિયાઓનો સમાવેશ જરૂરી છે. (પ્રકરણ: જંગલો કેમ?)"
+  },
+  {
+    "q": "પ્રશ્ન 83. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે જંગલ અને સમુદાય અંગે વિચારતાં—જંગલ ખોરાક, ઔષધિ, રોજગાર અને સ્થાનિક જ્ઞાનનો આધાર છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "સ્થાનિક સમુદાય સાથે સંયુક્ત સંરક્ષણ કરવું",
+      "લોકોને દૂર રાખવા",
+      "માત્ર વૃક્ષોની સંખ્યા ગણવી",
+      "વનવિનાશથી કોઈ અસર થતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જંગલો કેમ?",
+    "exp": "જંગલ સંરક્ષણમાં જીવસૃષ્ટિ, સ્થાનિક લોકો અને પર્યાવરણીય પ્રક્રિયાઓનો સમાવેશ જરૂરી છે. (પ્રકરણ: જંગલો કેમ?)"
+  },
+  {
+    "q": "પ્રશ્ન 84. પાઠમાં સમજાવેલી જંગલ અને સમુદાયની સંકલ્પના મુજબ, જંગલ ખોરાક, ઔષધિ, રોજગાર અને સ્થાનિક જ્ઞાનનો આધાર છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "સ્થાનિક સમુદાય સાથે સંયુક્ત સંરક્ષણ કરવું",
+      "લોકોને દૂર રાખવા",
+      "માત્ર વૃક્ષોની સંખ્યા ગણવી",
+      "વનવિનાશથી કોઈ અસર થતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જંગલો કેમ?",
+    "exp": "જંગલ સંરક્ષણમાં જીવસૃષ્ટિ, સ્થાનિક લોકો અને પર્યાવરણીય પ્રક્રિયાઓનો સમાવેશ જરૂરી છે. (પ્રકરણ: જંગલો કેમ?)"
+  },
+  {
+    "q": "પ્રશ્ન 85. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: વારસાગતતા. સંતાનને માતા અને પિતા બંને પાસેથી લક્ષણો મળે છે; ભાઈ-બહેનમાં ભિન્નતા હોઈ શકે છે.",
+    "options": [
+      "બંને માતાપિતાના લક્ષણોનું જુદું સંયોજન મળે છે",
+      "માત્ર માતાથી લક્ષણો મળે છે",
+      "બધાં સંતાન એકસરખાં હોય છે",
+      "લક્ષણો માત્ર ખોરાકથી નક્કી થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જીવન પિતા તેવો દીકરો",
+    "exp": "વારસાગત લક્ષણો બંને માતાપિતા પાસેથી મળે છે; પર્યાવરણ પણ વિકાસને અસર કરી શકે છે. (પ્રકરણ: જીવન પિતા તેવો દીકરો)"
+  },
+  {
+    "q": "પ્રશ્ન 86. વારસાગતતા અંગેનું અવલોકન: સંતાનને માતા અને પિતા બંને પાસેથી લક્ષણો મળે છે; ભાઈ-બહેનમાં ભિન્નતા હોઈ શકે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "બંને માતાપિતાના લક્ષણોનું જુદું સંયોજન મળે છે",
+      "માત્ર માતાથી લક્ષણો મળે છે",
+      "બધાં સંતાન એકસરખાં હોય છે",
+      "લક્ષણો માત્ર ખોરાકથી નક્કી થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જીવન પિતા તેવો દીકરો",
+    "exp": "વારસાગત લક્ષણો બંને માતાપિતા પાસેથી મળે છે; પર્યાવરણ પણ વિકાસને અસર કરી શકે છે. (પ્રકરણ: જીવન પિતા તેવો દીકરો)"
+  },
+  {
+    "q": "પ્રશ્ન 87. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે વારસાગતતા અંગે વિચારતાં—સંતાનને માતા અને પિતા બંને પાસેથી લક્ષણો મળે છે; ભાઈ-બહેનમાં ભિન્નતા હોઈ શકે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "બંને માતાપિતાના લક્ષણોનું જુદું સંયોજન મળે છે",
+      "માત્ર માતાથી લક્ષણો મળે છે",
+      "બધાં સંતાન એકસરખાં હોય છે",
+      "લક્ષણો માત્ર ખોરાકથી નક્કી થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જીવન પિતા તેવો દીકરો",
+    "exp": "વારસાગત લક્ષણો બંને માતાપિતા પાસેથી મળે છે; પર્યાવરણ પણ વિકાસને અસર કરી શકે છે. (પ્રકરણ: જીવન પિતા તેવો દીકરો)"
+  },
+  {
+    "q": "પ્રશ્ન 88. પાઠમાં સમજાવેલી વારસાગતતાની સંકલ્પના મુજબ, સંતાનને માતા અને પિતા બંને પાસેથી લક્ષણો મળે છે; ભાઈ-બહેનમાં ભિન્નતા હોઈ શકે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "બંને માતાપિતાના લક્ષણોનું જુદું સંયોજન મળે છે",
+      "માત્ર માતાથી લક્ષણો મળે છે",
+      "બધાં સંતાન એકસરખાં હોય છે",
+      "લક્ષણો માત્ર ખોરાકથી નક્કી થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: જીવન પિતા તેવો દીકરો",
+    "exp": "વારસાગત લક્ષણો બંને માતાપિતા પાસેથી મળે છે; પર્યાવરણ પણ વિકાસને અસર કરી શકે છે. (પ્રકરણ: જીવન પિતા તેવો દીકરો)"
+  },
+  {
+    "q": "પ્રશ્ન 89. આ પરિસ્થિતિનું સૌથી યોગ્ય વૈજ્ઞાનિક વિશ્લેષણ કયું છે? વિષય: નકશા વાંચન. દિશાસૂચક, માપદંડ અને સંકેતો સ્થળોનું સ્થાન અને અંતર સમજાવે છે.",
+    "options": [
+      "દિશા, અંતર અને સ્થાનનો સંબંધ સમજવો",
+      "માત્ર રંગ ઓળખવો",
+      "વરસાદનું પ્રમાણ માપવું",
+      "નકશાને ચિત્ર માનવું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: અમે ગુજરાતના",
+    "exp": "નકશામાં દિશા, માપદંડ અને સંકેતોનો ઉપયોગ ભૌગોલિક માહિતી સમજવા થાય છે. (પ્રકરણ: અમે ગુજરાતના)"
+  },
+  {
+    "q": "પ્રશ્ન 90. નકશા વાંચન અંગેનું અવલોકન: દિશાસૂચક, માપદંડ અને સંકેતો સ્થળોનું સ્થાન અને અંતર સમજાવે છે. આ આધારે વિદ્યાર્થીએ આ ઘટનામાંથી કયો નિષ્કર્ષ કાઢવો જોઈએ?",
+    "options": [
+      "દિશા, અંતર અને સ્થાનનો સંબંધ સમજવો",
+      "માત્ર રંગ ઓળખવો",
+      "વરસાદનું પ્રમાણ માપવું",
+      "નકશાને ચિત્ર માનવું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: અમે ગુજરાતના",
+    "exp": "નકશામાં દિશા, માપદંડ અને સંકેતોનો ઉપયોગ ભૌગોલિક માહિતી સમજવા થાય છે. (પ્રકરણ: અમે ગુજરાતના)"
+  },
+  {
+    "q": "પ્રશ્ન 91. પરિસ્થિતિમાં ફેરફાર થાય ત્યારે નકશા વાંચન અંગે વિચારતાં—દિશાસૂચક, માપદંડ અને સંકેતો સ્થળોનું સ્થાન અને અંતર સમજાવે છે. જો આ પરિસ્થિતિમાં એક પરિબળ બદલાય, તો કયો સિદ્ધાંત લાગુ પડે છે?",
+    "options": [
+      "દિશા, અંતર અને સ્થાનનો સંબંધ સમજવો",
+      "માત્ર રંગ ઓળખવો",
+      "વરસાદનું પ્રમાણ માપવું",
+      "નકશાને ચિત્ર માનવું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: અમે ગુજરાતના",
+    "exp": "નકશામાં દિશા, માપદંડ અને સંકેતોનો ઉપયોગ ભૌગોલિક માહિતી સમજવા થાય છે. (પ્રકરણ: અમે ગુજરાતના)"
+  },
+  {
+    "q": "પ્રશ્ન 92. પાઠમાં સમજાવેલી નકશા વાંચનની સંકલ્પના મુજબ, દિશાસૂચક, માપદંડ અને સંકેતો સ્થળોનું સ્થાન અને અંતર સમજાવે છે. નીચેના દાવાઓમાંથી પાઠના પુરાવા સાથે સુસંગત દાવો કયો છે?",
+    "options": [
+      "દિશા, અંતર અને સ્થાનનો સંબંધ સમજવો",
+      "માત્ર રંગ ઓળખવો",
+      "વરસાદનું પ્રમાણ માપવું",
+      "નકશાને ચિત્ર માનવું"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: અમે ગુજરાતના",
+    "exp": "નકશામાં દિશા, માપદંડ અને સંકેતોનો ઉપયોગ ભૌગોલિક માહિતી સમજવા થાય છે. (પ્રકરણ: અમે ગુજરાતના)"
+  },
+  {
+    "q": "પ્રશ્ન 93. શાળાના જીવન કે સ્થાનિક પર્યાવરણમાં કીડીઓનું માર્ગશોધનનો ઉપયોગ કરતાં, કીડીઓ અવરોધ પછી પણ ખોરાક સુધી પહોંચે છે. આ સમસ્યાનો ઉકેલ પસંદ કરતી વખતે કયો વિકલ્પ સૌથી તર્કસંગત છે?",
+    "options": [
+      "કીડીઓ પર્યાવરણના સંકેતોનો ઉપયોગ કરે છે",
+      "કીડીઓ માત્ર આંખથી માર્ગ શોધે છે",
+      "કીડીઓ હંમેશાં સીધી રેખામાં ચાલે છે",
+      "કીડીઓને ખોરાકની ગંધનો અનુભવ થતો નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: મજાની દુનિયાઓ",
+    "exp": "કીડીઓ માર્ગ અને ખોરાક શોધવામાં આસપાસના સંકેતોનો ઉપયોગ કરે છે. સતત અવલોકનથી તેમના વર્તનની સમજ મળે છે. (પ્રકરણ: મજાની દુનિયાઓ)"
+  },
+  {
+    "q": "પ્રશ્ન 94. શાળાના જીવન કે સ્થાનિક પર્યાવરણમાં જંતુઓમાં વિવિધતાનો ઉપયોગ કરતાં, જંતુઓની પાંખો અને શરીરરચના એકસરખી નથી. આ સમસ્યાનો ઉકેલ પસંદ કરતી વખતે કયો વિકલ્પ સૌથી તર્કસંગત છે?",
+    "options": [
+      "જંતુઓમાં પાંખોની હાજરી અને સંખ્યા જુદી હોઈ શકે છે",
+      "દરેક જંતુને બે જોડી પાંખો હોય છે",
+      "પાંખો માત્ર પાણીમાં રહેતા જંતુઓમાં હોય છે",
+      "જંતુઓની ઓળખ માત્ર રંગથી થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: મજાની દુનિયાઓ",
+    "exp": "જીવજંતુઓમાં વિવિધતા હોય છે; ઓળખ માટે અનેક લક્ષણોનું અવલોકન કરવું જોઈએ. (પ્રકરણ: મજાની દુનિયાઓ)"
+  },
+  {
+    "q": "પ્રશ્ન 95. શાળાના જીવન કે સ્થાનિક પર્યાવરણમાં સાપનું વર્તનનો ઉપયોગ કરતાં, સાપ મદારીની હલતી બીન અને શરીરની ગતિને અનુસરે છે. આ સમસ્યાનો ઉકેલ પસંદ કરતી વખતે કયો વિકલ્પ સૌથી તર્કસંગત છે?",
+    "options": [
+      "સાપ હલનચલનને અનુસરે છે",
+      "સાપ માનવીની જેમ સંગીતના તાલે નાચે છે",
+      "સાપ ગીતના શબ્દો સમજે છે",
+      "સાપને કોઈ હિલચાલ દેખાતી નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સાપ અને મદારી",
+    "exp": "સાપ બહારના કાનથી માનવીની જેમ સાંભળતો નથી; તે મદારીની હલતી બીનને અનુસરે છે. (પ્રકરણ: સાપ અને મદારી)"
+  },
+  {
+    "q": "પ્રશ્ન 96. શાળાના જીવન કે સ્થાનિક પર્યાવરણમાં સાપનો આહાર અને સંરક્ષણનો ઉપયોગ કરતાં, સાપ દૂધ પર આધારિત નથી; તે નાના પ્રાણીઓનો શિકાર કરે છે. આ સમસ્યાનો ઉકેલ પસંદ કરતી વખતે કયો વિકલ્પ સૌથી તર્કસંગત છે?",
+    "options": [
+      "સાપને દૂધ આપવું જરૂરી નથી; તેનું કુદરતી ભોજન અન્ય પ્રાણીઓ છે",
+      "દૂધ સાપનો મુખ્ય ખોરાક છે",
+      "દૂધ સાપનું ઝેર દૂર કરે છે",
+      "દરેક સાપ દૂધ વિના જીવતો નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સાપ અને મદારી",
+    "exp": "સાપનું કુદરતી આહાર દૂધ નથી. તે ઉંદર, દેડકા અને અન્ય નાના પ્રાણીઓનો શિકાર કરે છે. (પ્રકરણ: સાપ અને મદારી)"
+  },
+  {
+    "q": "પ્રશ્ન 97. શાળાના જીવન કે સ્થાનિક પર્યાવરણમાં પાચનની શરૂઆતનો ઉપયોગ કરતાં, મોઢામાં ખોરાક ચવાય છે અને લાળ સાથે ભળે છે. આ સમસ્યાનો ઉકેલ પસંદ કરતી વખતે કયો વિકલ્પ સૌથી તર્કસંગત છે?",
+    "options": [
+      "ચાવવાથી ખોરાક નાના ટુકડામાં થાય અને લાળ સાથે ભળે છે",
+      "ખોરાક સીધો લોહીમાં જાય છે",
+      "પાચન માત્ર પેટમાં શરૂ થાય છે",
+      "દાંત ખોરાકમાંથી પોષકતત્ત્વો ખેંચે છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વાદથી પાચન સુધી",
+    "exp": "મોઢામાં દાંત ખોરાકને નાના ટુકડામાં ફેરવે છે અને લાળ પાચનની શરૂઆતમાં મદદ કરે છે. (પ્રકરણ: સ્વાદથી પાચન સુધી)"
+  },
+  {
+    "q": "પ્રશ્ન 98. શાળાના જીવન કે સ્થાનિક પર્યાવરણમાં સ્વાદ અને ગંધનો ઉપયોગ કરતાં, ખોરાકનો સંપૂર્ણ સ્વાદ અનુભવવામાં નાકની ગંધ પણ ભાગ લે છે. આ સમસ્યાનો ઉકેલ પસંદ કરતી વખતે કયો વિકલ્પ સૌથી તર્કસંગત છે?",
+    "options": [
+      "સ્વાદના અનુભવમાં ગંધનો પણ ફાળો છે",
+      "સ્વાદ અને ગંધ અસંબંધિત છે",
+      "ગંધ માત્ર ખોરાકનો રંગ ઓળખે છે",
+      "સ્વાદનો અનુભવ પેટમાં થાય છે"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: સ્વાદથી પાચન સુધી",
+    "exp": "જીભની સ્વાદગ્રંથિઓ અને નાકની ગંધ ઓળખવાની ક્ષમતા સાથે મળીને ખોરાકનો અનુભવ બનાવે છે. (પ્રકરણ: સ્વાદથી પાચન સુધી)"
+  },
+  {
+    "q": "પ્રશ્ન 99. શાળાના જીવન કે સ્થાનિક પર્યાવરણમાં ખોરાક સાચવવોનો ઉપયોગ કરતાં, મીઠું, તેલ અને સૂકવણીથી બગાડ કરનારા સૂક્ષ્મજીવોની વૃદ્ધિ ઘટે છે. આ સમસ્યાનો ઉકેલ પસંદ કરતી વખતે કયો વિકલ્પ સૌથી તર્કસંગત છે?",
+    "options": [
+      "ભેજ અને સૂક્ષ્મજીવોની વૃદ્ધિ ઘટાડવી",
+      "ખોરાકમાં પાણી વધારવું",
+      "બધાં પોષકતત્ત્વો દૂર કરવાં",
+      "ખોરાકને તરત તાજા ફળમાં ફેરવવો"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: કેરીઓ બારમાસ!",
+    "exp": "મીઠું, તેલ અને સૂકવણી યોગ્ય રીતે વપરાય ત્યારે ખોરાક બગાડતા સૂક્ષ્મજીવોની વૃદ્ધિ મર્યાદિત થાય છે. (પ્રકરણ: કેરીઓ બારમાસ!)"
+  },
+  {
+    "q": "પ્રશ્ન 100. શાળાના જીવન કે સ્થાનિક પર્યાવરણમાં બીજનું અંકુરણનો ઉપયોગ કરતાં, અંકુરણ માટે ભેજ, હવા અને યોગ્ય તાપમાન જરૂરી છે. આ સમસ્યાનો ઉકેલ પસંદ કરતી વખતે કયો વિકલ્પ સૌથી તર્કસંગત છે?",
+    "options": [
+      "ભેજ સાથે હવા અને યોગ્ય તાપમાન જરૂરી છે",
+      "માત્ર પ્રકાશ જરૂરી છે",
+      "બીજને હવાની જરૂર નથી",
+      "માટી વિના બીજ ક્યારેય ઊગતું નથી"
+    ],
+    "ans": 0,
+    "unit": "પ્રકરણ: બીજ, બીજ, બીજ",
+    "exp": "અંકુરણ માટે ભેજ સાથે ઓક્સિજન અને યોગ્ય તાપમાન જરૂરી છે. (પ્રકરણ: બીજ, બીજ, બીજ)"
+  }
+];
+
+let studentName = "", studentPhone = "", studentEmail = "";
+let currentQ = 0;
+let userAnswers = new Array(questions.length).fill(null);
+let flaggedQuestions = new Array(questions.length).fill(false);
+let startTime, timerInterval;
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    const btn = document.getElementById("themeToggleBtn");
+    btn.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i> લાઈટ મોડ' : '<i class="fa-solid fa-moon"></i> ડાર્ક મોડ';
+}
+
+function showNotice(msg, type = "info") {
+    const box = document.getElementById("noticeMsg");
+    box.className = "msg-box " + (type === "error" ? "msg-error" : "msg-info");
+    box.innerText = msg;
+    box.style.display = "block";
+    setTimeout(() => { box.style.display = "none"; }, 6000);
+}
+
+/* ૧. ઑથેન્ટિકેશન & OTP */
+function requestOTP() {
+    studentName = document.getElementById("name").value.trim();
+    studentPhone = document.getElementById("phone").value.trim();
+    studentEmail = document.getElementById("email").value.trim();
+
+    if (!studentName || studentPhone.length < 10 || !studentEmail.includes("@")) {
+        showNotice("કૃપા કરીને પૂરું નામ, ૧૦ અંકનો સાચો મોબાઇલ નંબર અને માન્ય ઇમેઇલ દાખલ કરો.", "error");
+        return;
+    }
+
+    const btn = document.getElementById("getOtpBtn");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> OTP મોકલાઈ રહ્યો છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "sendOTP",
+            name: studentName,
+            email: studentEmail
+        })
+    })
+    .then(function() {
+        showNotice("આપના ઈમેઈલ પર ૪ અંકનો OTP મોકલવામાં આવ્યો છે. ઇનબોક્સ/સ્પામ તપાસો.", "info");
+        document.getElementById("otpContainer").style.display = "block";
+        btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i> OTP ફરીથી મોકલો';
+        btn.disabled = false;
+    })
+    .catch(function() {
+        showNotice("OTP મોકલવામાં ક્ષતિ આવી. ફરી પ્રયાસ કરો.", "error");
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> OTP મેળવો અને આગળ વધો';
+    });
+}
+
+function verifyAndStart() {
+    const enteredOTP = document.getElementById("otpInput").value.trim();
+    if (enteredOTP.length !== 4) {
+        showNotice("કૃપા કરીને ૪ અંકનો સાચો OTP દાખલ કરો.", "error");
+        return;
+    }
+
+    const vBtn = document.getElementById("verifyBtn");
+    vBtn.disabled = true;
+    vBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ચકાસણી ચાલુ છે...';
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "verifyOTP",
+            email: studentEmail,
+            otp: enteredOTP
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success" && data.verified) {
+            document.getElementById("loginScreen").style.display = "none";
+            document.getElementById("quizScreen").style.display = "block";
+            initQuestionPalette();
+            startTime = new Date();
+            timerInterval = setInterval(updateTimer, 1000);
+            loadQuestion();
+        } else {
+            showNotice("ખોટો OTP અથવા સમય વીતી ગયો છે! ફરી ચકાસો.", "error");
+            vBtn.disabled = false;
+            vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+        }
+    })
+    .catch(() => {
+        showNotice("ચકાસણીમાં ભૂલ થઈ. ફરી પ્રયાસ કરો.", "error");
+        vBtn.disabled = false;
+        vBtn.innerHTML = '<i class="fa-solid fa-unlock-keyhole"></i> OTP ચકાસો અને મોક ટેસ્ટ શરૂ કરો';
+    });
+}
+
+/* ૨. ટાઈમર */
+function updateTimer() {
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = String(Math.floor(elapsed / 60)).padStart(2, '0');
+    const secs = String(elapsed % 60).padStart(2, '0');
+    document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+}
+
+/* ૩. પ્રશ્ન પેલેટ (Question Palette 1-100) */
+function initQuestionPalette() {
+    const container = document.getElementById("questionGridContainer");
+    container.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.createElement("div");
+        pill.className = "q-pill";
+        pill.id = `qPill_${i}`;
+        pill.innerText = i + 1;
+        pill.onclick = () => jumpToQuestion(i);
+        container.appendChild(pill);
+    }
+    updatePaletteStats();
+}
+
+function updatePaletteStats() {
+    let answered = 0;
+    for (let i = 0; i < questions.length; i++) {
+        const pill = document.getElementById(`qPill_${i}`);
+        if (!pill) continue;
+        pill.className = "q-pill";
+        
+        if (i === currentQ) {
+            pill.classList.add("status-current");
+        }
+        if (flaggedQuestions[i]) {
+            pill.classList.add("status-flagged");
+        } else if (userAnswers[i] !== null) {
+            pill.classList.add("status-answered");
+            answered++;
+        }
+    }
+    const totalAns = userAnswers.filter(a => a !== null).length;
+    document.getElementById("answeredCountBadge").innerText = `${totalAns} / ${questions.length} પૂર્ણ`;
+}
+
+function jumpToQuestion(idx) {
+    currentQ = idx;
+    loadQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ૪. પ્રશ્ન લોડિંગ અને Flagging */
+function loadQuestion() {
+    const q = questions[currentQ];
+    document.getElementById("qProgress").innerText = `પ્રશ્ન ${currentQ + 1} / ${questions.length}`;
+    document.getElementById("unitBadge").innerText = `📘 ${q.unit}`;
+    document.getElementById("questionText").innerText = q.q;
+
+    // Flag button update
+    const flagBtn = document.getElementById("flagBtn");
+    if (flaggedQuestions[currentQ]) {
+        flagBtn.className = "btn-flag active-flag";
+        flagBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Flag કરેલ છે 🚩';
+    } else {
+        flagBtn.className = "btn-flag";
+        flagBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Flag (રિવ્યુ માટે)';
+    }
+
+    const optContainer = document.getElementById("optionsContainer");
+    optContainer.innerHTML = "";
+
+    q.options.forEach((opt, idx) => {
+        const label = document.createElement("label");
+        label.className = "option-label";
+        const isChecked = userAnswers[currentQ] === idx ? "checked" : "";
+        label.innerHTML = `
+            <input type="radio" name="opt" value="${idx}" ${isChecked} onchange="onOptionSelect(${idx})">
+            <span><strong>(${String.fromCharCode(65 + idx)})</strong> ${opt}</span>
+        `;
+        optContainer.appendChild(label);
+    });
+
+    document.getElementById("prevBtn").style.visibility = (currentQ === 0) ? "hidden" : "visible";
+    document.getElementById("nextBtn").innerHTML = (currentQ === questions.length - 1) 
+        ? '<i class="fa-solid fa-flag-checkered"></i> કસોટી પૂર્ણ કરો' 
+        : 'આગળ <i class="fa-solid fa-arrow-right"></i>';
+
+    updatePaletteStats();
+}
+
+function onOptionSelect(idx) {
+    userAnswers[currentQ] = idx;
+    updatePaletteStats();
+}
+
+function toggleFlagCurrentQuestion() {
+    flaggedQuestions[currentQ] = !flaggedQuestions[currentQ];
+    loadQuestion();
+}
+
+function prevQuestion() {
+    if (currentQ > 0) {
+        currentQ--;
+        loadQuestion();
+    }
+}
+
+function nextQuestion() {
+    if (currentQ < questions.length - 1) {
+        currentQ++;
+        loadQuestion();
+    } else {
+        confirmSubmitQuiz();
+    }
+}
+
+function confirmSubmitQuiz() {
+    const unans = userAnswers.filter(a => a === null).length;
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+    
+    let msg = "શું આપ ખરેખર કસોટી સબમિટ કરવા માંગો છો?";
+    if (unans > 0 || flagCount > 0) {
+        msg = `ધ્યાન આપો:
+- ${unans} પ્રશ્નોના ઉત્તર બાકી છે.
+- ${flagCount} પ્રશ્નો Flag કરેલા છે.
+
+શું આપ કસોટી સબમિટ કરવા માંગો છો?`;
+    }
+    
+    if (confirm(msg)) {
+        submitQuiz();
+    }
+}
+
+/* ૫. સબમિશન અને પરિણામ */
+function submitQuiz() {
+    clearInterval(timerInterval);
+    const elapsed = Math.floor((new Date() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = elapsed % 60;
+    const formattedTime = `${mins} મિનિટ ${secs} સેકન્ડ`;
+
+    let score = 0;
+    let wrongIndices = [];
+    questions.forEach((q, i) => {
+        if (userAnswers[i] === q.ans) {
+            score++;
+        } else {
+            wrongIndices.push(i);
+        }
+    });
+    const percent = ((score / questions.length) * 100).toFixed(2);
+    const flagCount = flaggedQuestions.filter(f => f === true).length;
+
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("resName").innerText = studentName;
+    document.getElementById("resPhone").innerText = studentPhone;
+    document.getElementById("resTime").innerText = `${mins}m ${secs}s`;
+    document.getElementById("resScore").innerText = `${score} / ${questions.length}`;
+    document.getElementById("resPercent").innerText = `${percent}% ગુણાંક`;
+    document.getElementById("resCorrectCount").innerText = score;
+    document.getElementById("resWrongCount").innerText = questions.length - score;
+    document.getElementById("resFlagCount").innerText = flagCount;
+
+    // ૧. માત્ર ખોટા પડેલા પ્રશ્નો રેન્ડર કરવા
+    renderWrongQuestions(wrongIndices);
+
+    // ૨. આપેલા જવાબો સાથેનું સંપૂર્ણ પ્રશ્નપત્ર
+    renderFullAnswerKey();
+
+    // ૩. મૂળ પ્રશ્નપત્ર (Blank Question Paper)
+    renderBlankPaper();
+
+    // ૪. Apps Script માટે HTML રિવ્યુ પેક કરવો
+    prepareAndSendBackendResult(score, percent, formattedTime);
+}
+
+function switchResultTab(tabName) {
+    document.getElementById("tabBtnWrong").classList.remove("active-tab");
+    document.getElementById("tabBtnAnswers").classList.remove("active-tab");
+    document.getElementById("tabBtnBlank").classList.remove("active-tab");
+
+    document.getElementById("tabContentWrong").style.display = "none";
+    document.getElementById("tabContentAnswers").style.display = "none";
+    document.getElementById("tabContentBlank").style.display = "none";
+
+    if (tabName === "wrong") {
+        document.getElementById("tabBtnWrong").classList.add("active-tab");
+        document.getElementById("tabContentWrong").style.display = "block";
+    } else if (tabName === "answers") {
+        document.getElementById("tabBtnAnswers").classList.add("active-tab");
+        document.getElementById("tabContentAnswers").style.display = "block";
+    } else if (tabName === "blank") {
+        document.getElementById("tabBtnBlank").classList.add("active-tab");
+        document.getElementById("tabContentBlank").style.display = "block";
+    }
+}
+
+function renderWrongQuestions(wrongIndices) {
+    const container = document.getElementById("wrongQuestionsList");
+    container.innerHTML = "";
+
+    if (wrongIndices.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 35px; background: var(--container-bg); border-radius: 12px; border: 2px solid #10b981;">
+                <i class="fa-solid fa-circle-check fa-3x" style="color: #10b981; margin-bottom: 12px;"></i>
+                <h3 style="color: #065f46; font-size: 18px;">અભિનંદન! તમારો એક પણ પ્રશ્ન ખોટો પડ્યો નથી!</h3>
+                <p style="color: var(--subheading-color); font-size: 13.5px; margin-top: 6px;">આપે ૧૦૦ માંથી ૧૦૦ સંપૂર્ણ ગુણ મેળવી શ્રેષ્ઠ પ્રદર્શન કરેલ છે.</p>
+            </div>
+        `;
+        return;
+    }
+
+    wrongIndices.forEach((i) => {
+        const q = questions[i];
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી (ખાલી છોડેલ)";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item is-wrong";
+        item.innerHTML = `
+            <p style="font-weight: 800; font-size: 15px; margin-bottom: 8px; white-space: pre-wrap; tab-size: 4;">${q.q}</p>
+            <p style="margin: 4px 0; font-weight: 700; color: #b91c1c;">
+                ❌ તમારો ઉત્તર: ${userChoiceText}
+            </p>
+            <p style="margin: 4px 0; font-weight: 700; color: #047857;">
+                ✅ સાચો ઉત્તર: <strong>(${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</strong>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>વિગતવાર સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderFullAnswerKey() {
+    const container = document.getElementById("allAnswersList");
+    container.innerHTML = "";
+
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        const item = document.createElement("div");
+        item.className = "review-item " + (isCorrect ? "is-correct" : "is-wrong");
+        item.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+                <span style="font-weight: 800; font-size: 15px; white-space: pre-wrap; tab-size: 4;">${q.q}</span>
+                <span style="font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 6px; background:${isCorrect ? '#10b981' : '#ef4444'}; color:white; white-space:nowrap;">
+                    ${isCorrect ? '✅ સાચો' : '❌ ખોટો'}
+                </span>
+            </div>
+            <div style="margin: 6px 0; font-size: 13.5px;">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="padding: 2px 0; ${oIdx === q.ans ? 'font-weight:bold; color:#047857;' : ''}">
+                        (${String.fromCharCode(65 + oIdx)}) ${opt} ${oIdx === q.ans ? '⭐ (સાચો ઉત્તર)' : ''}
+                    </div>
+                `).join('')}
+            </div>
+            <p style="margin: 6px 0; font-weight: 700;">
+                તમે પસંદ કરેલ જવાબ: <span style="color:${isCorrect ? '#047857' : '#b91c1c'};">${userChoiceText}</span>
+            </p>
+            <div class="exp-box">
+                <div style="font-size: 11.5px; font-weight: 800; color: #2563eb; margin-bottom: 3px;">📘 ${q.unit}</div>
+                <strong>સમજૂતી:</strong> ${q.exp}
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function renderBlankPaper() {
+    const container = document.getElementById("blankQuestionsList");
+    container.innerHTML = `
+        <div style="background: var(--card-gradient); padding: 14px; border-radius: 10px; margin-bottom: 14px; border: 1.5px solid var(--border-color); text-align: center;">
+            <h3 style="color: var(--heading-color); font-size: 16px; font-weight: 800;">📝 મૂળ પ્રશ્નપત્ર (Offline / Practice View)</h3>
+            <p style="color: var(--subheading-color); font-size: 12.5px;">આ પ્રશ્નપત્રમાં કોઈપણ જવાબ ટીક કરેલ નથી. તમે સ્વ-અધ્યયન કે પુનરાવર્તન માટે તેનો ઉપયોગ કરી શકો છો.</p>
+        </div>
+    `;
+
+    questions.forEach((q, i) => {
+        const box = document.createElement("div");
+        box.className = "blank-q-card";
+        box.innerHTML = `
+            <div style="font-weight: 800; font-size: 14.5px; margin-bottom: 8px; color: var(--heading-color); white-space: pre-wrap; tab-size: 4;">${q.q}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 13.5px; color: var(--text-color);">
+                ${q.options.map((opt, oIdx) => `
+                    <div style="background: var(--option-bg); padding: 7px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                        <strong>(${String.fromCharCode(65 + oIdx)})</strong> ${opt}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+function prepareAndSendBackendResult(score, percent, formattedTime) {
+    let emailReviewHtml = "";
+    
+    questions.forEach((q, i) => {
+        const isCorrect = (userAnswers[i] === q.ans);
+        const userChoiceText = userAnswers[i] !== null ? q.options[userAnswers[i]] : "જવાબ આપ્યો નથી";
+        const correctChoiceText = q.options[q.ans];
+
+        emailReviewHtml += `
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 12px; background-color: ${isCorrect ? '#f0fdf4' : '#fff1f2'};">
+                <p style="margin: 0 0 6px 0; font-weight: bold; color: #1e293b; white-space: pre-wrap;">${q.q}</p>
+                <p style="margin: 3px 0; color: ${isCorrect ? '#166534' : '#9f1239'};">
+                    <strong>પરીક્ષાર્થીનો ઉત્તર:</strong> ${userChoiceText} ${isCorrect ? '✅' : '❌'}
+                </p>
+                ${!isCorrect ? `<p style="margin: 3px 0; color: #166534; font-weight: bold;"><strong>સાચો ઉત્તર:</strong> (${String.fromCharCode(65 + q.ans)}) ${correctChoiceText}</p>` : ''}
+                <div style="background-color: #f8fafc; padding: 8px; border-radius: 4px; margin-top: 6px; font-size: 12.5px; border-left: 3px solid #2563eb;">
+                    <div style="color: #1e40af; font-weight: bold; margin-bottom: 2px;">📘 ${q.unit}</div>
+                    <strong>સમજૂતી:</strong> ${q.exp}
+                </div>
+            </div>
+        `;
+    });
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+            action: "submitResult",
+            dateTime: new Date().toLocaleString('gu-IN', { timeZone: 'Asia/Kolkata' }),
+            name: studentName,
+            phone: studentPhone,
+            email: studentEmail,
+            timeTaken: formattedTime,
+            score: `${score} / ${questions.length}`,
+            percentage: `${percent}%`,
+            subject: "TET–1 ધોરણ 5 – પર્યાવરણ : આસપાસ (100 HOTS પ્રશ્નો)",
+            detailedReviewHtml: emailReviewHtml,
+            repoName: "pro",
+            testFileName: "TET1_EVS_HOTS_100_Gujarati.html",
+            testUploadDate: "2026-11-15"
+        })
+    });
+}
+</script>
+</body>
+</html>
